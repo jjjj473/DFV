@@ -1,4 +1,5 @@
 #include "ai_sdk.h"
+#include "ai_tools.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -23,6 +24,11 @@ int main() {
         free(response);
     } else {
         fprintf(stderr, "API call failed\n");
+    }
+
+    if (ai_tool_summarize_text(client, "This is a long piece of text that needs summarising.", 0, &response) == 0 && response) {
+        printf("Summary: %s\n", response);
+        free(response);
     }
 
     const char *gkey = getenv("GEMINI_API_KEY");

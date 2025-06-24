@@ -15,6 +15,7 @@ public:
     std::string getBaseUrl(int index) const;
     std::string getApiKey(int index) const;
     std::string chat(const std::string &prompt, int system_index = 0);
+    AIClient* getClient() const { return client_; }
 
 private:
     AIClient *client_;

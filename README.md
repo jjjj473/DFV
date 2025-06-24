@@ -72,3 +72,20 @@ from C, or the `setBaseUrl()` and `setApiKey()` methods of the C++ wrapper.
 The SDK also provides helpers to inspect the current configuration:
 `ai_client_get_base_url()` and `ai_client_get_api_key()` (or `getBaseUrl()` and
 `getApiKey()` in C++).
+
+### Built-in tools
+
+`ai_tools.h` and `ai_tools.hpp` expose a small set of 13 helper functions for
+common tasks across text, code, images and PDF documents. These helpers build a
+prompt and call `ai_client_send_prompt_system()` under the hood.
+
+Example using the C API to summarise text:
+
+```c
+char *summary = NULL;
+ai_tool_summarize_text(client, "Some long text", 0, &summary);
+printf("Summary: %s\n", summary);
+free(summary);
+```
+
+The C++ wrapper offers similar methods via the `AIToolsCPP` class.

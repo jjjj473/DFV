@@ -1,4 +1,5 @@
 #include "ai_sdk.hpp"
+#include "ai_tools.h"
 #include <iostream>
 #include <cstdlib>
 
@@ -18,6 +19,13 @@ int main() {
     std::cout << "System 0 URL: " << client.getBaseUrl(0) << std::endl;
     std::string response = client.chat("Hello from C++", 0);
     std::cout << "AI: " << response << std::endl;
+
+    char *summary = NULL;
+    ai_tool_summarize_text(client.getClient(), "This is a long piece of text that needs summarising.", 0, &summary);
+    if (summary) {
+        std::cout << "Summary: " << summary << std::endl;
+        free(summary);
+    }
 
     if (const char* gkey = std::getenv("GEMINI_API_KEY")) {
         if (const char* gurl = std::getenv("GEMINI_API_URL"))
