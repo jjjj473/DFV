@@ -11,6 +11,10 @@ Requirements:
 - GCC and G++
 - libcurl development files
 
+An optional helper script, `scripts/setup_platform.sh`, attempts to install
+these dependencies automatically. It detects macOS, Windows or Linux
+distributions and falls back to legacy packages on older systems.
+
 Run `make` to build the static library (`libai_sdk.a`) and example programs:
 
 ```sh
