@@ -73,6 +73,13 @@ The SDK also provides helpers to inspect the current configuration:
 `ai_client_get_base_url()` and `ai_client_get_api_key()` (or `getBaseUrl()` and
 `getApiKey()` in C++).
 
+### System management
+
+`system_manager.h` offers utilities for working with multiple systems. Use
+`ai_count_available_systems()` to count configured systems and
+`ai_cycle_system()` to advance to the next one with a valid API key. The helper
+`ai_stop_on_error()` prints a message and exits, useful for fatal errors.
+
 ### Built-in tools
 
 `ai_tools.h` and `ai_tools.hpp` expose a set of 28 helper functions for

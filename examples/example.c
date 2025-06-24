@@ -1,4 +1,5 @@
 #include "ai_sdk.h"
+#include "system_manager.h"
 #include "ai_tools.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,8 +8,7 @@ int main() {
     const char *api_key = getenv("AI_API_KEY_1");
     if (!api_key) api_key = getenv("OPENAI_API_KEY");
     if (!api_key) {
-        fprintf(stderr, "Please set AI_API_KEY_1 or OPENAI_API_KEY environment variable\n");
-        return 1;
+        ai_stop_on_error("Please set AI_API_KEY_1 or OPENAI_API_KEY environment variable");
     }
     AIClient *client = ai_client_create(api_key, "https://api.openai.com/v1");
     /* Example of overriding the base URL for system 0 at runtime */
@@ -18,6 +18,7 @@ int main() {
         ai_client_set_base_url(client, 0, custom_url);
     }
     printf("System 0 URL: %s\n", ai_client_get_base_url(client, 0));
+    printf("Configured systems: %d\n", ai_count_available_systems(client));
     char *response = NULL;
     if (ai_client_send_prompt_system(client, 0, "Hello from C", &response) == 0) {
         printf("AI: %s\n", response);

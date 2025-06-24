@@ -1,4 +1,5 @@
 #include "ai_sdk.hpp"
+#include "system_manager.h"
 #include "ai_tools.hpp"
 #include <iostream>
 #include <cstdlib>
@@ -7,8 +8,7 @@ int main() {
     const char *api_key = std::getenv("AI_API_KEY_1");
     if (!api_key) api_key = std::getenv("OPENAI_API_KEY");
     if (!api_key) {
-        std::cerr << "Please set AI_API_KEY_1 or OPENAI_API_KEY environment variable" << std::endl;
-        return 1;
+        ai_stop_on_error("Please set AI_API_KEY_1 or OPENAI_API_KEY environment variable");
     }
     AIClientCPP client(api_key);
     if (const char* url = std::getenv("AI_API_URL_1")) {
@@ -17,6 +17,7 @@ int main() {
         client.setBaseUrl(0, url2);
     }
     std::cout << "System 0 URL: " << client.getBaseUrl(0) << std::endl;
+    std::cout << "Configured systems: " << ai_count_available_systems(client.getClient()) << std::endl;
     std::string response = client.chat("Hello from C++", 0);
     std::cout << "AI: " << response << std::endl;
 

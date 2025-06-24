@@ -208,3 +208,8 @@ const char *ai_client_get_api_key(const AIClient *client, int index) {
     if (!client || index < 0 || index >= AI_MAX_SYSTEMS) return "";
     return client->api_keys[index];
 }
+
+int ai_client_get_system(const AIClient *client) {
+    if (!client) return 0;
+    return client->current;
+}

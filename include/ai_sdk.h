@@ -23,6 +23,9 @@ void ai_client_set_api_key(AIClient *client, int index, const char *api_key);
 const char *ai_client_get_base_url(const AIClient *client, int index);
 const char *ai_client_get_api_key(const AIClient *client, int index);
 
+int ai_client_get_system(const AIClient *client);
+void ai_stop_on_error(const char *msg);
+
 #ifdef __cplusplus
 }
 #endif
