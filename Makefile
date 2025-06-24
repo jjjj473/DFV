@@ -1,24 +1,13 @@
-CC = gcc
-CFLAGS = -Wall -O3 -march=native -msse2 $(shell pkg-config --cflags gtk+-3.0 webkit2gtk-4.1)
-LDFLAGS = $(shell pkg-config --libs gtk+-3.0 webkit2gtk-4.1)
+CC=gcc
+CFLAGS=`pkg-config --cflags gtk+-3.0 gstreamer-1.0 gstreamer-video-1.0 ges-1.0` -O2 -Wall
+LDLIBS=`pkg-config --libs gtk+-3.0 gstreamer-1.0 gstreamer-video-1.0 ges-1.0`
 
-ASM_SRCS = asm/fast_add.S asm/fast_memcpy.S asm/fast_strlen.S \
-            asm/fast_uppercase.S asm/fast_memset.S asm/fast_strcmp.S \
-            asm/fast_memmove.S asm/fast_sum_array.S
-ASM_OBJS = $(ASM_SRCS:.S=.o)
+dfv_editor: src/dfv_editor.c
+	$(CC) $(CFLAGS) -o $@ $^ $(LDLIBS)
 
-SRCS = src/dfv_browser.c
-OBJS = $(SRCS:.c=.o) $(ASM_OBJS)
-
-dfv_browser: $(OBJS)
-	$(CC) -o $@ $(OBJS) $(LDFLAGS)
-
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-%.o: %.S
-	$(CC) -c $< -o $@
-
+all: dfv_editor
 
 clean:
-	$(RM) $(OBJS) dfv_browser
+	rm -f dfv_editor
+
+.PHONY: all clean
