@@ -24,7 +24,7 @@ int main() {
         printf("AI: %s\n", response);
         free(response);
     } else {
-        fprintf(stderr, "API call failed\n");
+        fprintf(stderr, "API call failed: %s\n", ai_client_last_error(client));
     }
 
     if (ai_tool_summarize_text(client, "This is a long piece of text that needs summarising.", 0, &response) == 0 && response) {
@@ -45,6 +45,11 @@ int main() {
         if (ai_client_send_prompt_system(client, 1, "Hello Gemini", &response) == 0 && response) {
             printf("Gemini: %s\n", response);
             free(response);
+        } else if (response) {
+            free(response);
+            fprintf(stderr, "Gemini call failed: %s\n", ai_client_last_error(client));
+        } else {
+            fprintf(stderr, "Gemini call failed: %s\n", ai_client_last_error(client));
         }
     }
     ai_client_destroy(client);

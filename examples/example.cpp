@@ -19,7 +19,11 @@ int main() {
     std::cout << "System 0 URL: " << client.getBaseUrl(0) << std::endl;
     std::cout << "Configured systems: " << ai_count_available_systems(client.getClient()) << std::endl;
     std::string response = client.chat("Hello from C++", 0);
-    std::cout << "AI: " << response << std::endl;
+    if (!response.empty()) {
+        std::cout << "AI: " << response << std::endl;
+    } else {
+        std::cerr << "API call failed: " << client.lastError() << std::endl;
+    }
 
     char *summary = NULL;
     ai_tool_summarize_text(client.getClient(), "This is a long piece of text that needs summarising.", 0, &summary);
@@ -36,7 +40,10 @@ int main() {
             client.setBaseUrl(1, gurl);
         client.setApiKey(1, gkey);
         std::string gresp = client.chat("Hello Gemini", 1);
-        std::cout << "Gemini: " << gresp << std::endl;
+        if (!gresp.empty())
+            std::cout << "Gemini: " << gresp << std::endl;
+        else
+            std::cerr << "Gemini call failed: " << client.lastError() << std::endl;
     }
     return 0;
 }

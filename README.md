@@ -77,6 +77,9 @@ The SDK also provides helpers to inspect the current configuration:
 `ai_client_get_base_url()` and `ai_client_get_api_key()` (or `getBaseUrl()` and
 `getApiKey()` in C++).
 
+Failed API calls store a message accessible via `ai_client_last_error()` (or
+`lastError()` in C++). Clear it with `ai_client_clear_error()`/`clearError()`.
+
 ### System management
 
 `system_manager.h` offers utilities for working with multiple systems. Use
@@ -88,7 +91,9 @@ The SDK also provides helpers to inspect the current configuration:
 
 `ai_tools.h` and `ai_tools.hpp` expose a set of 28 helper functions for
 common tasks across text, code, images and PDF documents. These helpers build a
-prompt and call `ai_client_send_prompt_system()` under the hood.
+prompt and call `ai_client_send_prompt_system()` under the hood. Each tool now
+prefaces the request with a short system message so the AI responds with more
+detailed and helpful output.
 
 Example using the C API to summarise text:
 

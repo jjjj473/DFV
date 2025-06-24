@@ -15,7 +15,21 @@ struct AIClient {
     char *api_keys[AI_MAX_SYSTEMS];
     char *base_urls[AI_MAX_SYSTEMS];
     int current;
+    char *last_error;
 };
+
+static void clear_error(AIClient *c) {
+    if (c) {
+        free(c->last_error);
+        c->last_error = NULL;
+    }
+}
+
+static void set_error(AIClient *c, const char *msg) {
+    if (!c) return;
+    clear_error(c);
+    if (msg) c->last_error = my_strdup(msg);
+}
 
 AIClient *ai_client_create(const char *api_key, const char *base_url) {
     AIClient *c = (AIClient*)malloc(sizeof(AIClient));
@@ -59,6 +73,7 @@ AIClient *ai_client_create(const char *api_key, const char *base_url) {
         c->base_urls[i] = my_strdup(url ? url : "");
     }
     c->current = 0;
+    c->last_error = NULL;
     return c;
 }
 
@@ -68,6 +83,7 @@ void ai_client_destroy(AIClient *c) {
         free(c->api_keys[i]);
         free(c->base_urls[i]);
     }
+    free(c->last_error);
     free(c);
 }
 
@@ -121,11 +137,21 @@ static char* build_post_data(const char *prompt) {
 }
 
 int ai_client_send_prompt_system(AIClient *client, int idx, const char *prompt, char **response) {
-    if (!client || !prompt || !response) return 1;
-    if (idx < 0 || idx >= AI_MAX_SYSTEMS) return 1;
+    if (!client || !prompt || !response) {
+        if (client) set_error(client, "Invalid arguments");
+        return 1;
+    }
+    clear_error(client);
+    if (idx < 0 || idx >= AI_MAX_SYSTEMS) {
+        set_error(client, "Invalid system index");
+        return 1;
+    }
 
     CURL *curl = curl_easy_init();
-    if (!curl) return 1;
+    if (!curl) {
+        set_error(client, "Failed to init curl");
+        return 1;
+    }
 
     struct buffer buf = {0};
 
@@ -152,6 +178,7 @@ int ai_client_send_prompt_system(AIClient *client, int idx, const char *prompt, 
     curl_easy_cleanup(curl);
 
     if (res != CURLE_OK) {
+        set_error(client, curl_easy_strerror(res));
         free(buf.data);
         return 1;
     }
@@ -212,4 +239,13 @@ const char *ai_client_get_api_key(const AIClient *client, int index) {
 int ai_client_get_system(const AIClient *client) {
     if (!client) return 0;
     return client->current;
+}
+
+const char *ai_client_last_error(const AIClient *client) {
+    if (!client || !client->last_error) return "";
+    return client->last_error;
+}
+
+void ai_client_clear_error(AIClient *client) {
+    clear_error(client);
 }

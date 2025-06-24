@@ -26,6 +26,9 @@ const char *ai_client_get_api_key(const AIClient *client, int index);
 int ai_client_get_system(const AIClient *client);
 void ai_stop_on_error(const char *msg);
 
+const char *ai_client_last_error(const AIClient *client);
+void ai_client_clear_error(AIClient *client);
+
 #ifdef __cplusplus
 }
 #endif

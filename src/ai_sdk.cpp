@@ -38,6 +38,17 @@ std::string AIClientCPP::getApiKey(int index) const
     return key ? key : "";
 }
 
+std::string AIClientCPP::lastError() const
+{
+    const char *err = ai_client_last_error(client_);
+    return err ? err : "";
+}
+
+void AIClientCPP::clearError()
+{
+    ai_client_clear_error(client_);
+}
+
 std::string AIClientCPP::chat(const std::string &prompt, int system_index)
 {
     char *resp = NULL;

@@ -4,13 +4,19 @@
 #include <string.h>
 
 static int send_prompt(AIClient *c, int sys, char **resp, const char *fmt, const char *a, const char *b) {
-    size_t len = strlen(fmt) + strlen(a) + (b ? strlen(b) : 0) + 1;
-    char *prompt = (char*)malloc(len);
-    if (!prompt) return 1;
+    const char *prefix = "You are a sophisticated assistant. ";
+    size_t msg_len = strlen(fmt) + strlen(a) + (b ? strlen(b) : 0) + 1;
+    char *message = (char*)malloc(msg_len);
+    if (!message) return 1;
     if (b)
-        sprintf(prompt, fmt, a, b);
+        sprintf(message, fmt, a, b);
     else
-        sprintf(prompt, fmt, a);
+        sprintf(message, fmt, a);
+    size_t len = strlen(prefix) + strlen(message) + 1;
+    char *prompt = (char*)malloc(len);
+    if (!prompt) { free(message); return 1; }
+    sprintf(prompt, "%s%s", prefix, message);
+    free(message);
     int r = ai_client_send_prompt_system(c, sys, prompt, resp);
     free(prompt);
     return r;
