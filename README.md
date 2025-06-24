@@ -3,8 +3,8 @@
 DFV Browser is a lightweight web browser written in C with GTK3 and WebKitGTK. The code
 incorporates several small x86_64 assembly routines to demonstrate how low-level
 optimizations can speed up common operations. A simple settings file lets you choose the
-homepage, while the Tools menu exposes system utilities like viewing CPU and memory info
-or launching a terminal.
+homepage, while the Tools menu exposes system utilities like viewing CPU and memory info,
+launching a terminal, inspecting network configuration and checking disk usage.
 
 The project no longer builds a full operating system image. Instead, it targets
 any modern Linux distribution with GTK3 and WebKitGTK development packages.
@@ -37,6 +37,8 @@ processors:
 - `fast_strlen.S` – vectorized string length routine
 - `fast_add.S` – 64‑bit addition example
 - `fast_uppercase.S` – converts strings to uppercase
+- `fast_memset.S` – optimized memory fill routine
+- `fast_strcmp.S` – compares two strings quickly
 
 ## Running
 
@@ -56,8 +58,8 @@ homepage, create a file containing a line like:
 homepage=https://your-site.example
 ```
 
-The Tools menu offers quick access to system information and a terminal
-launcher.
+The Tools menu offers quick access to system information, network details,
+disk usage statistics and a terminal launcher.
 
 Hardware acceleration is handled internally by WebKitGTK. If the underlying
 system provides GPU support, WebKitGTK will use it automatically to render web
