@@ -31,9 +31,9 @@ make clean
 
 ## Usage
 
-The SDK supports up to 13 different AI systems. Provide each system's API key
-and base URL via environment variables `AI_API_KEY_1` .. `AI_API_KEY_13` and
-`AI_API_URL_1` .. `AI_API_URL_13`.
+The SDK supports up to 27 different AI systems. Provide each system's API key
+and base URL via environment variables `AI_API_KEY_1` .. `AI_API_KEY_27` and
+`AI_API_URL_1` .. `AI_API_URL_27`.
 
 For convenience the library also recognises provider specific variables:
 
@@ -68,3 +68,7 @@ Developers can link against `libai_sdk.a` and include `ai_sdk.h` or
 `ai_sdk.hpp` in their projects to issue chat completion requests. Systems can be
 updated at runtime using `ai_client_set_base_url()` and `ai_client_set_api_key()`
 from C, or the `setBaseUrl()` and `setApiKey()` methods of the C++ wrapper.
+
+The SDK also provides helpers to inspect the current configuration:
+`ai_client_get_base_url()` and `ai_client_get_api_key()` (or `getBaseUrl()` and
+`getApiKey()` in C++).

@@ -15,6 +15,7 @@ int main() {
     } else if (const char* url2 = std::getenv("OPENAI_API_URL")) {
         client.setBaseUrl(0, url2);
     }
+    std::cout << "System 0 URL: " << client.getBaseUrl(0) << std::endl;
     std::string response = client.chat("Hello from C++", 0);
     std::cout << "AI: " << response << std::endl;
 

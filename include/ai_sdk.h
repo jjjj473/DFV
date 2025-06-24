@@ -7,7 +7,7 @@ extern "C" {
 
 typedef struct AIClient AIClient;
 
-#define AI_MAX_SYSTEMS 13
+#define AI_MAX_SYSTEMS 27
 
 AIClient *ai_client_create(const char *api_key, const char *base_url);
 void ai_client_destroy(AIClient *client);
@@ -19,6 +19,9 @@ int ai_client_send_prompt(AIClient *client, const char *prompt, char **response)
 
 void ai_client_set_base_url(AIClient *client, int index, const char *base_url);
 void ai_client_set_api_key(AIClient *client, int index, const char *api_key);
+
+const char *ai_client_get_base_url(const AIClient *client, int index);
+const char *ai_client_get_api_key(const AIClient *client, int index);
 
 #ifdef __cplusplus
 }

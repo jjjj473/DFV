@@ -16,6 +16,7 @@ int main() {
     if (custom_url) {
         ai_client_set_base_url(client, 0, custom_url);
     }
+    printf("System 0 URL: %s\n", ai_client_get_base_url(client, 0));
     char *response = NULL;
     if (ai_client_send_prompt_system(client, 0, "Hello from C", &response) == 0) {
         printf("AI: %s\n", response);

@@ -198,3 +198,13 @@ void ai_client_set_api_key(AIClient *client, int index, const char *api_key) {
     free(client->api_keys[index]);
     client->api_keys[index] = my_strdup(api_key ? api_key : "");
 }
+
+const char *ai_client_get_base_url(const AIClient *client, int index) {
+    if (!client || index < 0 || index >= AI_MAX_SYSTEMS) return "";
+    return client->base_urls[index];
+}
+
+const char *ai_client_get_api_key(const AIClient *client, int index) {
+    if (!client || index < 0 || index >= AI_MAX_SYSTEMS) return "";
+    return client->api_keys[index];
+}

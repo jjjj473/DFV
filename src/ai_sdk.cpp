@@ -26,6 +26,18 @@ void AIClientCPP::setApiKey(int index, const std::string &api_key)
     ai_client_set_api_key(client_, index, api_key.c_str());
 }
 
+std::string AIClientCPP::getBaseUrl(int index) const
+{
+    const char *url = ai_client_get_base_url(client_, index);
+    return url ? url : "";
+}
+
+std::string AIClientCPP::getApiKey(int index) const
+{
+    const char *key = ai_client_get_api_key(client_, index);
+    return key ? key : "";
+}
+
 std::string AIClientCPP::chat(const std::string &prompt, int system_index)
 {
     char *resp = NULL;
