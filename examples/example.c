@@ -3,14 +3,14 @@
 #include <stdlib.h>
 
 int main() {
-    const char *api_key = getenv("OPENAI_API_KEY");
+    const char *api_key = getenv("AI_API_KEY_1");
     if (!api_key) {
-        fprintf(stderr, "Please set OPENAI_API_KEY environment variable\n");
+        fprintf(stderr, "Please set AI_API_KEY_1 environment variable\n");
         return 1;
     }
     AIClient *client = ai_client_create(api_key, "https://api.openai.com/v1");
     char *response = NULL;
-    if (ai_client_send_prompt(client, "Hello from C", &response) == 0) {
+    if (ai_client_send_prompt_system(client, 0, "Hello from C", &response) == 0) {
         printf("AI: %s\n", response);
         free(response);
     } else {

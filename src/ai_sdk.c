@@ -12,22 +12,38 @@ static char *my_strdup(const char *s) {
 }
 
 struct AIClient {
-    char *api_key;
-    char *base_url;
+    char *api_keys[AI_MAX_SYSTEMS];
+    char *base_urls[AI_MAX_SYSTEMS];
+    int current;
 };
 
 AIClient *ai_client_create(const char *api_key, const char *base_url) {
     AIClient *c = (AIClient*)malloc(sizeof(AIClient));
     if (!c) return NULL;
-    c->api_key = my_strdup(api_key ? api_key : "");
-    c->base_url = my_strdup(base_url ? base_url : "https://api.openai.com/v1");
+    for (int i = 0; i < AI_MAX_SYSTEMS; ++i) {
+        char key_var[32];
+        char url_var[32];
+        snprintf(key_var, sizeof(key_var), "AI_API_KEY_%d", i + 1);
+        snprintf(url_var, sizeof(url_var), "AI_API_URL_%d", i + 1);
+        const char *key = getenv(key_var);
+        const char *url = getenv(url_var);
+        if (i == 0) {
+            if (!key) key = api_key;
+            if (!url) url = base_url ? base_url : "https://api.openai.com/v1";
+        }
+        c->api_keys[i] = my_strdup(key ? key : "");
+        c->base_urls[i] = my_strdup(url ? url : "");
+    }
+    c->current = 0;
     return c;
 }
 
 void ai_client_destroy(AIClient *c) {
     if (!c) return;
-    free(c->api_key);
-    free(c->base_url);
+    for (int i = 0; i < AI_MAX_SYSTEMS; ++i) {
+        free(c->api_keys[i]);
+        free(c->base_urls[i]);
+    }
     free(c);
 }
 
@@ -48,11 +64,13 @@ static size_t write_cb(void *ptr, size_t size, size_t nmemb, void *userdata) {
     return total;
 }
 
-static char* build_url(const AIClient *c) {
+static char* build_url(const AIClient *c, int idx) {
+    const char *base = c->base_urls[idx];
+    if (!base || !*base) base = "https://api.openai.com/v1";
     const char *path = "/chat/completions";
-    size_t len = strlen(c->base_url) + strlen(path) + 1;
+    size_t len = strlen(base) + strlen(path) + 1;
     char *url = (char*)malloc(len);
-    if (url) sprintf(url, "%s%s", c->base_url, path);
+    if (url) sprintf(url, "%s%s", base, path);
     return url;
 }
 
@@ -78,8 +96,9 @@ static char* build_post_data(const char *prompt) {
     return json;
 }
 
-int ai_client_send_prompt(AIClient *client, const char *prompt, char **response) {
+int ai_client_send_prompt_system(AIClient *client, int idx, const char *prompt, char **response) {
     if (!client || !prompt || !response) return 1;
+    if (idx < 0 || idx >= AI_MAX_SYSTEMS) return 1;
 
     CURL *curl = curl_easy_init();
     if (!curl) return 1;
@@ -88,11 +107,11 @@ int ai_client_send_prompt(AIClient *client, const char *prompt, char **response)
 
     struct curl_slist *headers = NULL;
     char auth[256];
-    snprintf(auth, sizeof(auth), "Authorization: Bearer %s", client->api_key);
+    snprintf(auth, sizeof(auth), "Authorization: Bearer %s", client->api_keys[idx]);
     headers = curl_slist_append(headers, auth);
     headers = curl_slist_append(headers, "Content-Type: application/json");
 
-    char *url = build_url(client);
+    char *url = build_url(client, idx);
     char *post = build_post_data(prompt);
 
     curl_easy_setopt(curl, CURLOPT_URL, url);
@@ -131,4 +150,15 @@ int ai_client_send_prompt(AIClient *client, const char *prompt, char **response)
     free(buf.data);
     *response = content;
     return 0;
+}
+
+void ai_client_set_system(AIClient *c, int index) {
+    if (!c) return;
+    if (index >= 0 && index < AI_MAX_SYSTEMS)
+        c->current = index;
+}
+
+int ai_client_send_prompt(AIClient *client, const char *prompt, char **response) {
+    if (!client) return 1;
+    return ai_client_send_prompt_system(client, client->current, prompt, response);
 }

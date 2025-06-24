@@ -31,11 +31,15 @@ make clean
 
 ## Usage
 
-Set your API key in the environment variable `OPENAI_API_KEY` and run one of the
-examples:
+The SDK supports up to 13 different AI systems. Provide each system's API key
+and base URL via environment variables `AI_API_KEY_1` .. `AI_API_KEY_13` and
+`AI_API_URL_1` .. `AI_API_URL_13`. The first system defaults to OpenAI if no
+variables are supplied.
+
+Set the first API key in `AI_API_KEY_1` and run one of the examples:
 
 ```sh
-export OPENAI_API_KEY=your-key-here
+export AI_API_KEY_1=your-key-here
 ./example_c
 # or
 ./example_cpp

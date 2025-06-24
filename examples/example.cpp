@@ -3,13 +3,13 @@
 #include <cstdlib>
 
 int main() {
-    const char *api_key = std::getenv("OPENAI_API_KEY");
+    const char *api_key = std::getenv("AI_API_KEY_1");
     if (!api_key) {
-        std::cerr << "Please set OPENAI_API_KEY environment variable" << std::endl;
+        std::cerr << "Please set AI_API_KEY_1 environment variable" << std::endl;
         return 1;
     }
     AIClientCPP client(api_key);
-    std::string response = client.chat("Hello from C++");
+    std::string response = client.chat("Hello from C++", 0);
     std::cout << "AI: " << response << std::endl;
     return 0;
 }

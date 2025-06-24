@@ -11,10 +11,15 @@ AIClientCPP::~AIClientCPP()
     ai_client_destroy(client_);
 }
 
-std::string AIClientCPP::chat(const std::string &prompt)
+void AIClientCPP::setSystem(int index)
+{
+    ai_client_set_system(client_, index);
+}
+
+std::string AIClientCPP::chat(const std::string &prompt, int system_index)
 {
     char *resp = NULL;
-    if (ai_client_send_prompt(client_, prompt.c_str(), &resp) == 0 && resp) {
+    if (ai_client_send_prompt_system(client_, system_index, prompt.c_str(), &resp) == 0 && resp) {
         std::string result(resp);
         free(resp);
         return result;

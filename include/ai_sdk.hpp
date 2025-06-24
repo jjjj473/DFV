@@ -8,7 +8,10 @@ class AIClientCPP {
 public:
     AIClientCPP(const std::string &api_key, const std::string &base_url = "https://api.openai.com/v1");
     ~AIClientCPP();
-    std::string chat(const std::string &prompt);
+
+    void setSystem(int index);
+    std::string chat(const std::string &prompt, int system_index = 0);
+
 private:
     AIClient *client_;
 };
