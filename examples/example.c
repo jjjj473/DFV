@@ -30,6 +30,10 @@ int main() {
         printf("Summary: %s\n", response);
         free(response);
     }
+    if (ai_tool_fix_grammar(client, "This sentence are bad.", 0, &response) == 0 && response) {
+        printf("Fixed: %s\n", response);
+        free(response);
+    }
 
     const char *gkey = getenv("GEMINI_API_KEY");
     if (gkey) {

@@ -21,6 +21,21 @@ public:
     std::string extractTextFromPdf(const std::string &text, int system = 0);
     std::string summarizePdf(const std::string &text, int system = 0);
     std::string answerQuestionFromPdf(const std::string &text, const std::string &question, int system = 0);
+    std::string fixGrammar(const std::string &text, int system = 0);
+    std::string listKeyPoints(const std::string &text, int system = 0);
+    std::string summarizeCode(const std::string &code, int system = 0);
+    std::string documentCode(const std::string &code, int system = 0);
+    std::string optimizeCode(const std::string &code, int system = 0);
+    std::string generateUnitTests(const std::string &code, int system = 0);
+    std::string captionImage(const std::string &description, int system = 0);
+    std::string thumbnailPrompt(const std::string &description, int system = 0);
+    std::string extractKeywords(const std::string &text, int system = 0);
+    std::string translateFromEnglish(const std::string &text, int system = 0);
+    std::string detectLanguage(const std::string &text, int system = 0);
+    std::string continueText(const std::string &text, int system = 0);
+    std::string generateTitle(const std::string &text, int system = 0);
+    std::string generateMetaDescription(const std::string &text, int system = 0);
+    std::string outlinePdfSections(const std::string &text, int system = 0);
 
 private:
     AIClient *client_;

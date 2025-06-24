@@ -31,9 +31,9 @@ make clean
 
 ## Usage
 
-The SDK supports up to 27 different AI systems. Provide each system's API key
-and base URL via environment variables `AI_API_KEY_1` .. `AI_API_KEY_27` and
-`AI_API_URL_1` .. `AI_API_URL_27`.
+The SDK supports up to 40 different AI systems. Provide each system's API key
+and base URL via environment variables `AI_API_KEY_1` .. `AI_API_KEY_40` and
+`AI_API_URL_1` .. `AI_API_URL_40`.
 
 For convenience the library also recognises provider specific variables:
 
@@ -75,7 +75,7 @@ The SDK also provides helpers to inspect the current configuration:
 
 ### Built-in tools
 
-`ai_tools.h` and `ai_tools.hpp` expose a small set of 13 helper functions for
+`ai_tools.h` and `ai_tools.hpp` expose a set of 28 helper functions for
 common tasks across text, code, images and PDF documents. These helpers build a
 prompt and call `ai_client_send_prompt_system()` under the hood.
 

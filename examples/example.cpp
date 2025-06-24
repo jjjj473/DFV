@@ -1,5 +1,5 @@
 #include "ai_sdk.hpp"
-#include "ai_tools.h"
+#include "ai_tools.hpp"
 #include <iostream>
 #include <cstdlib>
 
@@ -26,6 +26,9 @@ int main() {
         std::cout << "Summary: " << summary << std::endl;
         free(summary);
     }
+    AIToolsCPP tools(client.getClient());
+    std::string fixed = tools.fixGrammar("This sentence are bad.");
+    std::cout << "Fixed: " << fixed << std::endl;
 
     if (const char* gkey = std::getenv("GEMINI_API_KEY")) {
         if (const char* gurl = std::getenv("GEMINI_API_URL"))
