@@ -4,6 +4,8 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/utsname.h>
+#include <sys/sysinfo.h>
 
 void fast_memcpy(void *dest, const void *src, size_t n);
 size_t fast_strlen(const char *s);
@@ -77,6 +79,42 @@ static void on_disk_usage(GtkMenuItem *m, gpointer win)
     if (err) g_error_free(err);
 }
 
+static void on_kernel_info(GtkMenuItem *m, gpointer win)
+{
+    struct utsname u;
+    if (uname(&u) == 0) {
+        char info[256];
+        snprintf(info, sizeof(info), "%s %s\n%s\n%s", u.sysname, u.release,
+                 u.version, u.machine);
+        GtkWidget *d = gtk_message_dialog_new(GTK_WINDOW(win), GTK_DIALOG_MODAL,
+            GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE,
+            "%s", info);
+        gtk_dialog_run(GTK_DIALOG(d));
+        gtk_widget_destroy(d);
+    }
+}
+
+static void on_memory_stats(GtkMenuItem *m, gpointer win)
+{
+    struct sysinfo s;
+    if (sysinfo(&s) == 0) {
+        double l1 = s.loads[0] / (double)(1 << SI_LOAD_SHIFT);
+        double l5 = s.loads[1] / (double)(1 << SI_LOAD_SHIFT);
+        double l15 = s.loads[2] / (double)(1 << SI_LOAD_SHIFT);
+        char buf[256];
+        snprintf(buf, sizeof(buf),
+                 "Uptime: %ld s\nLoad: %.2f %.2f %.2f\nRAM: %lu/%lu MB",
+                 s.uptime, l1, l5, l15,
+                 (unsigned long)((s.totalram - s.freeram) / 1024 / 1024),
+                 (unsigned long)(s.totalram / 1024 / 1024));
+        GtkWidget *d = gtk_message_dialog_new(GTK_WINDOW(win), GTK_DIALOG_MODAL,
+            GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE,
+            "%s", buf);
+        gtk_dialog_run(GTK_DIALOG(d));
+        gtk_widget_destroy(d);
+    }
+}
+
 static void activate(GtkApplication *app, gpointer user_data)
 {
     GtkWidget *window = gtk_application_window_new(app);
@@ -93,10 +131,14 @@ static void activate(GtkApplication *app, gpointer user_data)
     GtkWidget *net_item = gtk_menu_item_new_with_label("Network Info");
     GtkWidget *disk_item = gtk_menu_item_new_with_label("Disk Usage");
     GtkWidget *term_item = gtk_menu_item_new_with_label("Open Terminal");
+    GtkWidget *kern_item = gtk_menu_item_new_with_label("Kernel Info");
+    GtkWidget *mem_item = gtk_menu_item_new_with_label("Memory Stats");
     gtk_menu_shell_append(GTK_MENU_SHELL(tools_menu), info_item);
     gtk_menu_shell_append(GTK_MENU_SHELL(tools_menu), net_item);
     gtk_menu_shell_append(GTK_MENU_SHELL(tools_menu), disk_item);
     gtk_menu_shell_append(GTK_MENU_SHELL(tools_menu), term_item);
+    gtk_menu_shell_append(GTK_MENU_SHELL(tools_menu), kern_item);
+    gtk_menu_shell_append(GTK_MENU_SHELL(tools_menu), mem_item);
     gtk_menu_shell_append(GTK_MENU_SHELL(menubar), tools_item);
     gtk_box_pack_start(GTK_BOX(box), menubar, FALSE, FALSE, 0);
 
@@ -114,6 +156,8 @@ static void activate(GtkApplication *app, gpointer user_data)
     g_signal_connect(net_item, "activate", G_CALLBACK(on_network_info), window);
     g_signal_connect(disk_item, "activate", G_CALLBACK(on_disk_usage), window);
     g_signal_connect(term_item, "activate", G_CALLBACK(on_open_terminal), window);
+    g_signal_connect(kern_item, "activate", G_CALLBACK(on_kernel_info), window);
+    g_signal_connect(mem_item, "activate", G_CALLBACK(on_memory_stats), window);
 
     char buf[64];
     char buf2[64];
