@@ -13,6 +13,8 @@ long fast_add(long a, long b);
 void fast_uppercase(char *s);
 void *fast_memset(void *dest, int c, size_t n);
 int fast_strcmp(const char *a, const char *b);
+void *fast_memmove(void *dest, const void *src, size_t n);
+unsigned long fast_sum_array(const unsigned int *arr, size_t n);
 
 static const char *load_homepage(void)
 {
@@ -115,6 +117,17 @@ static void on_memory_stats(GtkMenuItem *m, gpointer win)
     }
 }
 
+static void on_stack_change(GObject *stack, GParamSpec *pspec, gpointer data)
+{
+    const char *name = gtk_stack_get_visible_child_name(GTK_STACK(stack));
+    WebKitWebView *wv = WEBKIT_WEB_VIEW(data);
+    WebKitWebInspector *insp = webkit_web_view_get_inspector(wv);
+    if (g_strcmp0(name, "devtools") == 0)
+        webkit_web_inspector_show(insp);
+    else
+        webkit_web_inspector_close(insp);
+}
+
 static void activate(GtkApplication *app, gpointer user_data)
 {
     GtkWidget *window = gtk_application_window_new(app);
@@ -142,8 +155,36 @@ static void activate(GtkApplication *app, gpointer user_data)
     gtk_menu_shell_append(GTK_MENU_SHELL(menubar), tools_item);
     gtk_box_pack_start(GTK_BOX(box), menubar, FALSE, FALSE, 0);
 
+    GtkWidget *hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+    gtk_box_pack_end(GTK_BOX(box), hbox, TRUE, TRUE, 0);
+
+    GtkWidget *sidebar = gtk_stack_sidebar_new();
+    GtkWidget *stack = gtk_stack_new();
+    gtk_stack_sidebar_set_stack(GTK_STACK_SIDEBAR(sidebar), GTK_STACK(stack));
+    gtk_box_pack_start(GTK_BOX(hbox), sidebar, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(hbox), stack, TRUE, TRUE, 0);
+
+    GtkWidget *webpage = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
+    gtk_widget_set_hexpand(webpage, TRUE);
+    gtk_widget_set_vexpand(webpage, TRUE);
+    gtk_stack_add_titled(GTK_STACK(stack), webpage, "web", "Web");
+
     GtkWidget *webview = webkit_web_view_new();
-    gtk_box_pack_end(GTK_BOX(box), webview, TRUE, TRUE, 0);
+    gtk_box_pack_start(GTK_BOX(webpage), webview, TRUE, TRUE, 0);
+
+    GtkWidget *dl_label = gtk_label_new("No downloads yet");
+    gtk_stack_add_titled(GTK_STACK(stack), dl_label, "downloads", "Downloads");
+
+    GtkWidget *hist_label = gtk_label_new("History not implemented");
+    gtk_stack_add_titled(GTK_STACK(stack), hist_label, "history", "History");
+
+    GtkWidget *settings_label = gtk_label_new("Settings go here");
+    gtk_stack_add_titled(GTK_STACK(stack), settings_label, "settings", "Settings");
+
+    GtkWidget *dev_label = gtk_label_new("Developer tools");
+    gtk_stack_add_titled(GTK_STACK(stack), dev_label, "devtools", "Dev Tools");
+
+    gtk_stack_set_visible_child_name(GTK_STACK(stack), "web");
 
     const char *home = load_homepage();
     const char *uri = user_data ? (const char *)user_data : home;
@@ -159,6 +200,8 @@ static void activate(GtkApplication *app, gpointer user_data)
     g_signal_connect(kern_item, "activate", G_CALLBACK(on_kernel_info), window);
     g_signal_connect(mem_item, "activate", G_CALLBACK(on_memory_stats), window);
 
+    g_signal_connect(stack, "notify::visible-child-name", G_CALLBACK(on_stack_change), webview);
+
     char buf[64];
     char buf2[64];
     const char *demo = "fast routines";
@@ -168,7 +211,13 @@ static void activate(GtkApplication *app, gpointer user_data)
     long sum = fast_add(2, 3);
     int cmp = fast_strcmp(buf, demo);
     fast_uppercase(buf);
-    g_print("Assembly demo: %s (len=%zu, add=%ld, cmp=%d)\n", buf, len, sum, cmp);
+    char movestr[32] = "overlap demo";
+    fast_memmove(movestr+3, movestr, fast_strlen(movestr)+1);
+    unsigned int arr[4] = {1,2,3,4};
+    unsigned long total = fast_sum_array(arr, 4);
+    g_print("Assembly demo: %s (len=%zu, add=%ld, cmp=%d, sum=%lu)\n",
+           buf, len, sum, cmp, total);
+    g_print("Memmove result: %s\n", movestr);
 
     gtk_widget_show_all(window);
 }

@@ -3,7 +3,8 @@ CFLAGS = -Wall -O3 -march=native -msse2 $(shell pkg-config --cflags gtk+-3.0 web
 LDFLAGS = $(shell pkg-config --libs gtk+-3.0 webkit2gtk-4.1)
 
 ASM_SRCS = asm/fast_add.S asm/fast_memcpy.S asm/fast_strlen.S \
-            asm/fast_uppercase.S asm/fast_memset.S asm/fast_strcmp.S
+            asm/fast_uppercase.S asm/fast_memset.S asm/fast_strcmp.S \
+            asm/fast_memmove.S asm/fast_sum_array.S
 ASM_OBJS = $(ASM_SRCS:.S=.o)
 
 SRCS = src/dfv_browser.c

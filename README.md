@@ -40,6 +40,8 @@ processors:
 - `fast_uppercase.S` – converts strings to uppercase
 - `fast_memset.S` – optimized memory fill routine
 - `fast_strcmp.S` – compares two strings quickly
+- `fast_memmove.S` – handles overlapping copies efficiently
+- `fast_sum_array.S` – sums 32‑bit integers using SIMD
 
 ## Running
 
@@ -70,6 +72,11 @@ homepage=https://duckduckgo.com/?q=dfv&ia=web
 The Tools menu offers quick access to system information, network details,
 disk usage statistics and a terminal launcher.  Additional options show the
 running kernel version and memory statistics using Linux system calls.
+
+The main window also provides a sidebar built with `GtkStackSidebar`.  It lets
+you switch between the web view and additional pages for Downloads, History,
+Settings and Developer Tools. Selecting the Dev Tools page automatically opens
+the WebKit inspector so you can debug pages just like in other browsers.
 
 Hardware acceleration is handled internally by WebKitGTK. If the underlying
 system provides GPU support, WebKitGTK will use it automatically to render web
