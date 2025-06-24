@@ -1,3 +1,4 @@
+.intel_syntax noprefix
 .globl fast_strlen
 .section .rodata
 zero:

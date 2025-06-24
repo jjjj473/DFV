@@ -1,3 +1,4 @@
+.intel_syntax noprefix
 .globl fast_uppercase
 fast_uppercase:
     mov rax, rdi

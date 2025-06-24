@@ -1,3 +1,4 @@
+.intel_syntax noprefix
 .globl fast_strcmp
 fast_strcmp:
     xor eax, eax

@@ -19,7 +19,7 @@ any modern Linux distribution with GTK3 and WebKitGTK development packages.
 On Debian/Ubuntu systems you can install the dependencies with:
 
 ```bash
-sudo apt-get install build-essential libgtk-3-dev libwebkit2gtk-4.0-dev
+sudo apt-get install build-essential libgtk-3-dev libwebkit2gtk-4.1-dev
 ```
 
 ## Building

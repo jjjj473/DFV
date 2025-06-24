@@ -1,3 +1,4 @@
+.intel_syntax noprefix
 .globl fast_memset
 fast_memset:
     push rdi

@@ -1,14 +1,15 @@
+.intel_syntax noprefix
 .globl fast_memcpy
 fast_memcpy:
     mov rcx, rdx          # byte count
     shr rcx, 5            # number of 32-byte chunks
     jz .remainder
 .loop:
-    prefetcht0 0x80(rsi)
+    prefetcht0 [rsi+0x80]
     movdqu xmm0, [rsi]
-    movdqu xmm1, 16[rsi]
+    movdqu xmm1, [rsi+16]
     movdqu [rdi], xmm0
-    movdqu 16[rdi], xmm1
+    movdqu [rdi+16], xmm1
     add rsi, 32
     add rdi, 32
     dec rcx
