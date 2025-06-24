@@ -16,7 +16,7 @@ int fast_strcmp(const char *a, const char *b);
 
 static const char *load_homepage(void)
 {
-    static char home[256] = "https://example.com";
+    static char home[256] = "https://duckduckgo.com";
     char *path = g_build_filename(g_get_home_dir(), ".dfv_browser.conf", NULL);
     gchar *contents = NULL;
     if (g_file_get_contents(path, &contents, NULL, NULL)) {

@@ -46,17 +46,25 @@ processors:
 Execute the browser with an optional URL:
 
 ```bash
-./dfv_browser https://example.com
+./dfv_browser https://duckduckgo.com
 ```
 
-If no URL is provided, it opens `https://example.com` by default. At start-up
-it runs the assembly routines and prints their results to the terminal.
+If no URL is provided, it opens `https://duckduckgo.com` by default. At start-up
+it runs the assembly routines and prints their results to the terminal.  The
+homepage can also point at the DuckDuckGo API to show search results directly.
 
 The browser reads `~/.dfv_browser.conf` for user settings. To change the
 homepage, create a file containing a line like:
 
 ```ini
 homepage=https://your-site.example
+```
+
+For example, to load DuckDuckGo's Instant Answer API search for "dfv" on start
+up, you could set:
+
+```ini
+homepage=https://duckduckgo.com/?q=dfv&ia=web
 ```
 
 The Tools menu offers quick access to system information, network details,
