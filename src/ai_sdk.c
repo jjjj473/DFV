@@ -27,10 +27,34 @@ AIClient *ai_client_create(const char *api_key, const char *base_url) {
         snprintf(url_var, sizeof(url_var), "AI_API_URL_%d", i + 1);
         const char *key = getenv(key_var);
         const char *url = getenv(url_var);
-        if (i == 0) {
+
+        /* provider specific fallbacks */
+        switch (i) {
+        case 0:
+            if (!key) key = getenv("OPENAI_API_KEY");
+            if (!url) url = getenv("OPENAI_API_URL");
             if (!key) key = api_key;
             if (!url) url = base_url ? base_url : "https://api.openai.com/v1";
+            break;
+        case 1:
+            if (!key) key = getenv("GEMINI_API_KEY");
+            if (!url) url = getenv("GEMINI_API_URL");
+            if (!url) url = "https://generativelanguage.googleapis.com/v1";
+            break;
+        case 2:
+            if (!key) key = getenv("TOGETHER_API_KEY");
+            if (!url) url = getenv("TOGETHER_API_URL");
+            if (!url) url = "https://api.together.xyz/v1";
+            break;
+        case 3:
+            if (!key) key = getenv("CLAUDE_API_KEY");
+            if (!url) url = getenv("CLAUDE_API_URL");
+            if (!url) url = "https://api.anthropic.com/v1";
+            break;
+        default:
+            break;
         }
+
         c->api_keys[i] = my_strdup(key ? key : "");
         c->base_urls[i] = my_strdup(url ? url : "");
     }

@@ -33,16 +33,32 @@ make clean
 
 The SDK supports up to 13 different AI systems. Provide each system's API key
 and base URL via environment variables `AI_API_KEY_1` .. `AI_API_KEY_13` and
-`AI_API_URL_1` .. `AI_API_URL_13`. The first system defaults to OpenAI if no
-variables are supplied.
+`AI_API_URL_1` .. `AI_API_URL_13`.
 
-Set the first API key in `AI_API_KEY_1` and run one of the examples:
+For convenience the library also recognises provider specific variables:
+
+- `OPENAI_API_KEY` / `OPENAI_API_URL` (system index 0)
+- `GEMINI_API_KEY` / `GEMINI_API_URL` (system index 1)
+- `TOGETHER_API_KEY` / `TOGETHER_API_URL` (system index 2)
+- `CLAUDE_API_KEY` / `CLAUDE_API_URL` (system index 3)
+
+The first system defaults to OpenAI if no variables are supplied.
+
+Set the first API key in `AI_API_KEY_1` (or `OPENAI_API_KEY`) and run one of the examples:
 
 ```sh
 export AI_API_KEY_1=your-key-here
 ./example_c
 # or
 ./example_cpp
+```
+
+To try the Gemini endpoint provide `GEMINI_API_KEY` (and optionally
+`GEMINI_API_URL`) and pass system index `1`:
+
+```sh
+export GEMINI_API_KEY=your-gemini-key
+./example_c    # will also print a Gemini response
 ```
 
 Both examples send a simple prompt to the API and print the returned message

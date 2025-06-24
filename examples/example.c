@@ -4,13 +4,15 @@
 
 int main() {
     const char *api_key = getenv("AI_API_KEY_1");
+    if (!api_key) api_key = getenv("OPENAI_API_KEY");
     if (!api_key) {
-        fprintf(stderr, "Please set AI_API_KEY_1 environment variable\n");
+        fprintf(stderr, "Please set AI_API_KEY_1 or OPENAI_API_KEY environment variable\n");
         return 1;
     }
     AIClient *client = ai_client_create(api_key, "https://api.openai.com/v1");
     /* Example of overriding the base URL for system 0 at runtime */
     const char *custom_url = getenv("AI_API_URL_1");
+    if (!custom_url) custom_url = getenv("OPENAI_API_URL");
     if (custom_url) {
         ai_client_set_base_url(client, 0, custom_url);
     }
@@ -20,6 +22,18 @@ int main() {
         free(response);
     } else {
         fprintf(stderr, "API call failed\n");
+    }
+
+    const char *gkey = getenv("GEMINI_API_KEY");
+    if (gkey) {
+        const char *gurl = getenv("GEMINI_API_URL");
+        if (gurl)
+            ai_client_set_base_url(client, 1, gurl);
+        ai_client_set_api_key(client, 1, gkey);
+        if (ai_client_send_prompt_system(client, 1, "Hello Gemini", &response) == 0 && response) {
+            printf("Gemini: %s\n", response);
+            free(response);
+        }
     }
     ai_client_destroy(client);
     return 0;
