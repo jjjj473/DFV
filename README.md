@@ -25,6 +25,18 @@ Compile the editor with:
 make
 ```
 
+### Optional: Download pre-built effects
+
+To try additional GStreamer effects without building them yourself, run:
+
+```sh
+./scripts/download_effects.sh
+```
+
+This script fetches binary plugin packages from the GStreamer project and
+places them in an `external/` directory. The editor will load any effects
+available in your system's plugin path at runtime.
+
 ## Running
 
 ```
