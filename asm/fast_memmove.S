@@ -19,3 +19,4 @@ fast_memmove:
 .ret:
     mov rax, rdi
     ret
+.section .note.GNU-stack,"",@progbits

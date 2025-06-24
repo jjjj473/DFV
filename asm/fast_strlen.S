@@ -20,3 +20,4 @@ fast_strlen:
     add rax, rcx
     sub rax, rdi
     ret
+.section .note.GNU-stack,"",@progbits

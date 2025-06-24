@@ -23,3 +23,4 @@ fast_memcpy:
     jnz .tail
 .done:
     ret
+.section .note.GNU-stack,"",@progbits

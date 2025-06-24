@@ -17,3 +17,4 @@ fast_uppercase:
     jmp 1b
 2:
     ret
+.section .note.GNU-stack,"",@progbits

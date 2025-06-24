@@ -20,3 +20,4 @@ fast_strcmp:
 .equal:
     xor eax, eax
     ret
+.section .note.GNU-stack,"",@progbits

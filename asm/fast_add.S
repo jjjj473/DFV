@@ -4,3 +4,4 @@ fast_add:
     mov rax, rdi
     add rax, rsi
     ret
+.section .note.GNU-stack,"",@progbits

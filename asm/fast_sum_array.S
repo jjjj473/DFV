@@ -29,3 +29,4 @@ fast_sum_array:
 .tail_end:
 .ret:
     ret
+.section .note.GNU-stack,"",@progbits

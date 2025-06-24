@@ -7,3 +7,4 @@ fast_memset:
     rep stosb
     pop rax         # return original dest
     ret
+.section .note.GNU-stack,"",@progbits
