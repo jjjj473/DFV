@@ -49,4 +49,6 @@ Both examples send a simple prompt to the API and print the returned message
 content.
 
 Developers can link against `libai_sdk.a` and include `ai_sdk.h` or
-`ai_sdk.hpp` in their projects to issue chat completion requests.
+`ai_sdk.hpp` in their projects to issue chat completion requests. Systems can be
+updated at runtime using `ai_client_set_base_url()` and `ai_client_set_api_key()`
+from C, or the `setBaseUrl()` and `setApiKey()` methods of the C++ wrapper.

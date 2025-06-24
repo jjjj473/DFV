@@ -16,6 +16,16 @@ void AIClientCPP::setSystem(int index)
     ai_client_set_system(client_, index);
 }
 
+void AIClientCPP::setBaseUrl(int index, const std::string &base_url)
+{
+    ai_client_set_base_url(client_, index, base_url.c_str());
+}
+
+void AIClientCPP::setApiKey(int index, const std::string &api_key)
+{
+    ai_client_set_api_key(client_, index, api_key.c_str());
+}
+
 std::string AIClientCPP::chat(const std::string &prompt, int system_index)
 {
     char *resp = NULL;

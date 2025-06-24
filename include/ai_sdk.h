@@ -17,6 +17,9 @@ int ai_client_send_prompt_system(AIClient *client, int index, const char *prompt
 
 int ai_client_send_prompt(AIClient *client, const char *prompt, char **response);
 
+void ai_client_set_base_url(AIClient *client, int index, const char *base_url);
+void ai_client_set_api_key(AIClient *client, int index, const char *api_key);
+
 #ifdef __cplusplus
 }
 #endif

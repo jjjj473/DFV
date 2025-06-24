@@ -9,6 +9,9 @@ int main() {
         return 1;
     }
     AIClientCPP client(api_key);
+    if (const char* url = std::getenv("AI_API_URL_1")) {
+        client.setBaseUrl(0, url);
+    }
     std::string response = client.chat("Hello from C++", 0);
     std::cout << "AI: " << response << std::endl;
     return 0;

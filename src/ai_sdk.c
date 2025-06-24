@@ -162,3 +162,15 @@ int ai_client_send_prompt(AIClient *client, const char *prompt, char **response)
     if (!client) return 1;
     return ai_client_send_prompt_system(client, client->current, prompt, response);
 }
+
+void ai_client_set_base_url(AIClient *client, int index, const char *base_url) {
+    if (!client || index < 0 || index >= AI_MAX_SYSTEMS) return;
+    free(client->base_urls[index]);
+    client->base_urls[index] = my_strdup(base_url ? base_url : "");
+}
+
+void ai_client_set_api_key(AIClient *client, int index, const char *api_key) {
+    if (!client || index < 0 || index >= AI_MAX_SYSTEMS) return;
+    free(client->api_keys[index]);
+    client->api_keys[index] = my_strdup(api_key ? api_key : "");
+}
