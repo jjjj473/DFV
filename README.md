@@ -55,8 +55,9 @@ If no URL is provided, it opens `https://duckduckgo.com` by default. At start-up
 it runs the assembly routines and prints their results to the terminal.  The
 homepage can also point at the DuckDuckGo API to show search results directly.
 
-The browser reads `~/.dfv_browser.conf` for user settings. To change the
-homepage, create a file containing a line like:
+The browser reads `~/.dfv_browser.conf` for user settings. You can edit this
+file manually or use the Settings page in the browser to update the homepage.
+If editing the file directly, create a line like:
 
 ```ini
 homepage=https://your-site.example
@@ -73,10 +74,12 @@ The Tools menu offers quick access to system information, network details,
 disk usage statistics and a terminal launcher.  Additional options show the
 running kernel version and memory statistics using Linux system calls.
 
-The main window also provides a sidebar built with `GtkStackSidebar`.  It lets
+The main window also provides a sidebar built with `GtkStackSidebar`. It lets
 you switch between the web view and additional pages for Downloads, History,
-Settings and Developer Tools. Selecting the Dev Tools page automatically opens
-the WebKit inspector so you can debug pages just like in other browsers.
+Settings and Developer Tools. The Downloads and History views are populated
+automatically as you browse, while the Settings page lets you change the
+homepage directly from the GUI. Selecting the Dev Tools page automatically
+opens the WebKit inspector so you can debug pages just like in other browsers.
 
 Hardware acceleration is handled internally by WebKitGTK. If the underlying
 system provides GPU support, WebKitGTK will use it automatically to render web

@@ -16,6 +16,55 @@ int fast_strcmp(const char *a, const char *b);
 void *fast_memmove(void *dest, const void *src, size_t n);
 unsigned long fast_sum_array(const unsigned int *arr, size_t n);
 
+static GtkListBox *downloads_box;
+static GtkListBox *history_box;
+static GtkEntry *home_entry;
+
+static void add_history_item(const char *uri)
+{
+    if (!history_box || !uri)
+        return;
+    GtkWidget *label = gtk_label_new(uri);
+    gtk_widget_set_halign(label, GTK_ALIGN_START);
+    gtk_list_box_insert(history_box, label, -1);
+    gtk_widget_show(label);
+}
+
+static void add_download_item(const char *uri)
+{
+    if (!downloads_box || !uri)
+        return;
+    GtkWidget *label = gtk_label_new(uri);
+    gtk_widget_set_halign(label, GTK_ALIGN_START);
+    gtk_list_box_insert(downloads_box, label, -1);
+    gtk_widget_show(label);
+}
+
+static void on_settings_save(GtkButton *btn, gpointer data)
+{
+    const char *text = gtk_entry_get_text(home_entry);
+    char *path = g_build_filename(g_get_home_dir(), ".dfv_browser.conf", NULL);
+    gchar *contents = g_strdup_printf("homepage=%s\n", text);
+    g_file_set_contents(path, contents, -1, NULL);
+    g_free(contents);
+    g_free(path);
+}
+
+static void on_load_changed(WebKitWebView *wv, WebKitLoadEvent ev, gpointer data)
+{
+    if (ev == WEBKIT_LOAD_FINISHED) {
+        const char *uri = webkit_web_view_get_uri(wv);
+        add_history_item(uri);
+    }
+}
+
+static void on_download_started(WebKitWebView *wv, WebKitDownload *dl, gpointer data)
+{
+    WebKitURIRequest *req = webkit_download_get_request(dl);
+    const char *uri = req ? webkit_uri_request_get_uri(req) : NULL;
+    add_download_item(uri);
+}
+
 static const char *load_homepage(void)
 {
     static char home[256] = "https://duckduckgo.com";
@@ -164,6 +213,8 @@ static void activate(GtkApplication *app, gpointer user_data)
     gtk_box_pack_start(GTK_BOX(hbox), sidebar, FALSE, FALSE, 0);
     gtk_box_pack_start(GTK_BOX(hbox), stack, TRUE, TRUE, 0);
 
+    const char *home = load_homepage();
+
     GtkWidget *webpage = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
     gtk_widget_set_hexpand(webpage, TRUE);
     gtk_widget_set_vexpand(webpage, TRUE);
@@ -171,22 +222,31 @@ static void activate(GtkApplication *app, gpointer user_data)
 
     GtkWidget *webview = webkit_web_view_new();
     gtk_box_pack_start(GTK_BOX(webpage), webview, TRUE, TRUE, 0);
+    g_signal_connect(webview, "load-changed", G_CALLBACK(on_load_changed), NULL);
+    g_signal_connect(webview, "download-started", G_CALLBACK(on_download_started), NULL);
 
-    GtkWidget *dl_label = gtk_label_new("No downloads yet");
-    gtk_stack_add_titled(GTK_STACK(stack), dl_label, "downloads", "Downloads");
+    downloads_box = GTK_LIST_BOX(gtk_list_box_new());
+    gtk_stack_add_titled(GTK_STACK(stack), GTK_WIDGET(downloads_box), "downloads", "Downloads");
 
-    GtkWidget *hist_label = gtk_label_new("History not implemented");
-    gtk_stack_add_titled(GTK_STACK(stack), hist_label, "history", "History");
+    history_box = GTK_LIST_BOX(gtk_list_box_new());
+    gtk_stack_add_titled(GTK_STACK(stack), GTK_WIDGET(history_box), "history", "History");
 
-    GtkWidget *settings_label = gtk_label_new("Settings go here");
-    gtk_stack_add_titled(GTK_STACK(stack), settings_label, "settings", "Settings");
+    GtkWidget *settings_page = gtk_box_new(GTK_ORIENTATION_VERTICAL, 6);
+    GtkWidget *label = gtk_label_new("Homepage:");
+    home_entry = GTK_ENTRY(gtk_entry_new());
+    gtk_entry_set_text(home_entry, home);
+    GtkWidget *save_btn = gtk_button_new_with_label("Save");
+    gtk_box_pack_start(GTK_BOX(settings_page), label, FALSE, FALSE, 4);
+    gtk_box_pack_start(GTK_BOX(settings_page), GTK_WIDGET(home_entry), FALSE, FALSE, 4);
+    gtk_box_pack_start(GTK_BOX(settings_page), save_btn, FALSE, FALSE, 4);
+    gtk_stack_add_titled(GTK_STACK(stack), settings_page, "settings", "Settings");
+    g_signal_connect(save_btn, "clicked", G_CALLBACK(on_settings_save), NULL);
 
     GtkWidget *dev_label = gtk_label_new("Developer tools");
     gtk_stack_add_titled(GTK_STACK(stack), dev_label, "devtools", "Dev Tools");
 
     gtk_stack_set_visible_child_name(GTK_STACK(stack), "web");
 
-    const char *home = load_homepage();
     const char *uri = user_data ? (const char *)user_data : home;
     webkit_web_view_load_uri(WEBKIT_WEB_VIEW(webview), uri);
 
