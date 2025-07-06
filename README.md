@@ -16,6 +16,17 @@ Files included:
 - `ai_model_basic.txt` — describes a model that assembles static sites using these datasets
 - `ai_model_dynamic.txt` — outlines a dynamic application builder trained on the same files
 - `custom_ai_model.py` — loads all datasets and answers queries with simple pattern matching
+- `requirements.txt` — Python dependencies (includes the `torch` package)
 
 Each JavaScript file mirrors the HTML tag lists with example actions showing how scripts interact with those tags.
 The placeholder lines previously numbered as "Example entry" have been replaced with concise snippets of real JavaScript.
+
+## Setup
+
+Install the dependencies with:
+
+```bash
+pip install -r requirements.txt
+```
+
+The `custom_ai_model.py` script will use `torch` if available to perform simple vector matching across the datasets.
