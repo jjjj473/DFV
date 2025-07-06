@@ -1,0 +1,55 @@
+# JavaScript for Media Elements
+
+const img = document.querySelector('img'); : Reference an image element.
+img.src = 'new.jpg'; : Change the image source.
+
+const video = document.querySelector('video'); : Reference a video element.
+video.play(); : Play the video.
+video.pause(); : Pause the video.
+video.currentTime = 0; : Reset to the start.
+
+const audio = document.querySelector('audio'); : Reference an audio element.
+audio.play(); : Play the audio.
+audio.pause(); : Pause playback.
+audio.volume = 0.5; : Set playback volume.
+
+const canvas = document.querySelector('canvas'); : Reference a canvas.
+const ctx = canvas.getContext('2d'); : Get the drawing context.
+ctx.fillStyle = 'blue'; : Set a fill color.
+ctx.fillRect(0, 0, 100, 100); : Draw a rectangle.
+
+const iframe = document.querySelector('iframe'); : Reference an iframe element.
+iframe.src = 'page.html'; : Load a different page in the iframe.
+
+const video = document.querySelector('video');
+video.play();
+document.querySelector('audio').volume = 0.5;
+const img = document.querySelector('img');
+img.src = 'photo.jpg';
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+ctx.fillRect(10, 10, 50, 50);
+document.querySelector('source').src = 'movie.mp4';
+document.querySelector('track').mode = 'showing';
+const picture = document.querySelector('picture');
+const source = document.createElement('source');
+source.srcset = 'small.jpg';
+picture.appendChild(source);
+document.querySelector('svg').setAttribute('width', '100');
+
+document.querySelector('img').alt = 'Description';
+document.querySelector('video').muted = true;
+document.querySelector('audio').currentTime = 10;
+const track = document.createElement('track');
+track.kind = 'captions';
+document.querySelector('video').appendChild(track);
+const ctx2 = canvas.getContext('2d');
+ctx2.clearRect(0, 0, canvas.width, canvas.height);
+document.querySelector('svg').innerHTML = '<circle cx="50" cy="50" r="40" />';
+const picture2 = document.querySelector('picture');
+picture2.innerHTML = '<source srcset="large.jpg" media="(min-width:800px)">';
+document.querySelector('iframe').setAttribute('sandbox','');
+document.querySelector('canvas').toDataURL();
+document.querySelector('video').load();
+document.querySelector('img').addEventListener('load', () => console.log('loaded'));
+These examples show how JavaScript can control and update the media tags from the HTML dataset.

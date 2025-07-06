@@ -1,0 +1,913 @@
+# Form Elements
+
+<form>       : Container for collecting user input.
+<label>      : Defines a label for an input element.
+<input>      : Accepts various types of user data like text, numbers, or files.
+<textarea>   : Allows entry of multi-line text input.
+<select>     : Creates a drop-down list.
+<option>     : Represents an option in a drop-down list.
+<button>     : Adds a clickable button; can submit forms or run scripts.
+<fieldset>   : Groups related form elements together.
+<legend>     : Provides a caption for <fieldset>.
+
+These tags are used to build interactive forms, enabling users to submit data and interact with websites.
+<!--...--> : Defines a comment
+<!DOCTYPE> : Defines the document type
+<a> : Defines a hyperlink
+<abbr> : Defines an abbreviation or an acronym
+<address> : Defines contact information for the author/owner of a document
+<area> : Defines an area inside an image map
+<b> : Defines bold text
+<base> : Specifies the base URL/target for all relative URLs in a document
+<bdi> : Isolates a part of text that might be formatted in a different direction from other text outside it
+<bdo> : Overrides the current text direction
+<blockquote> : Defines a section that is quoted from another source
+<body> : Defines the document's body
+<br> : Defines a single line break
+<button> : Defines a clickable button
+<canvas> : Used to draw graphics, on the fly, via scripting (usually JavaScript)
+<caption> : Defines a table caption
+<cite> : Defines the title of a work
+<code> : Defines a piece of computer code
+<col> : Specifies column properties for each column within a &lt;colgroup&gt; element&nbsp;
+<colgroup> : Specifies a group of one or more columns in a table for formatting
+<data> : Adds a machine-readable translation of a given content
+<datalist> : Specifies a list of pre-defined options for input controls
+<dd> : Defines a description/value of a term in a description list
+<del> : Defines text that has been deleted from a document
+<details> : Defines additional details that the user can view or hide
+<dfn> : Specifies a term that is going to be defined within the content
+<dialog> : Defines a dialog box or window
+<div> : Defines a section in a document
+<dl> : Defines a description list
+<dt> : Defines a term/name in a description list
+<em> : Defines emphasized text&nbsp;
+<embed> : Defines a container for an external application
+<fieldset> : Groups related elements in a form
+<footer> : Defines a footer for a document or section
+<form> : Defines an HTML form for user input
+<h1&gt; to &lt;h6> : Defines HTML headings
+<head> : Contains metadata/information for the document
+<header> : Defines a header for a document or section
+<hgroup> : Defines a header and related content
+<hr> : Defines a thematic change in the content
+<html> : Defines the root of an HTML document
+<i> : Defines a part of text in an alternate voice or mood
+<iframe> : Defines an inline frame
+<img> : Defines an image
+<input> : Defines an input control
+<ins> : Defines a text that has been inserted into a document
+<kbd> : Defines keyboard input
+<label> : Defines a label&nbsp;for an &lt;input&gt; element
+<legend> : Defines a caption for a &lt;fieldset&gt; element
+<li> : Defines a list item
+<link> : Defines the relationship between a document and an external resource (most used to link to style sheets)
+<main> : Specifies the main content of a document
+<map> : Defines an image map
+<mark> : Defines marked/highlighted text
+<menu> : Defines an unordered list
+<meta> : Defines metadata about an HTML document
+<meter> : Defines a scalar measurement within a known range (a gauge)
+<nav> : Defines navigation links
+<noscript> : Defines an alternate content for users that do not support client-side scripts
+<object> : Defines a container for an external application
+<ol> : Defines an ordered list
+<optgroup> : Defines a group of related options in a drop-down list
+<option> : Defines an option in a drop-down list
+<output> : Defines the result of a calculation
+<p> : Defines a paragraph
+<param> : Defines a parameter for an object
+<picture> : Defines a container for multiple image resources
+<pre> : Defines preformatted text
+<progress> : Represents the progress of a task
+<q> : Defines a short quotation
+<rp> : Defines what to show in browsers that do not support ruby annotations
+<rt> : Defines an explanation/pronunciation of characters (for East Asian typography)
+<ruby> : Defines a ruby annotation (for East Asian typography)
+<s> : Defines text that is no longer correct
+<samp> : Defines sample output from a computer program
+<script> : Defines a client-side script
+<search> : Defines a search section
+<section> : Defines a section in a document
+<select> : Defines a drop-down list
+<small> : Defines smaller text
+<source> : Defines multiple media resources for media elements (&lt;video&gt; and &lt;audio&gt;)
+<span> : Defines a section in a document
+<strong> : Defines important text
+<style> : Defines style information for a document
+<sub> : Defines subscripted text
+<summary> : Defines a visible heading for a &lt;details&gt; element
+<sup> : Defines superscripted text
+<svg> : Defines a container for SVG graphics
+<table> : Defines a table
+<tbody> : Groups the body content in a table
+<td> : Defines a cell in a table
+<template> : Defines a container for content that should be hidden when the page loads
+<textarea> : Defines a multiline input control (text area)
+<tfoot> : Groups the footer content in a table
+<th> : Defines a header cell in a table
+<thead> : Groups the header content in a table
+<time> : Defines a specific time (or datetime)
+<title> : Defines a title for the document
+<tr> : Defines a row in a table
+<track> : Defines text tracks for media elements (&lt;video&gt; and &lt;audio&gt;)
+<html> : Example entry 1 - Root of document
+<head> : Example entry 2 - Metadata container
+<title> : Example entry 3 - Title of the document
+<body> : Example entry 4 - Main document content
+<header> : Example entry 5 - Introductory section
+<footer> : Example entry 6 - Bottom section
+<main> : Example entry 7 - Primary content
+<section> : Example entry 8 - Thematic grouping
+<article> : Example entry 9 - Independent content
+<aside> : Example entry 10 - Indirectly related content
+<nav> : Example entry 11 - Navigation links
+<div> : Example entry 12 - Block container
+<span> : Example entry 13 - Inline container
+<p> : Example entry 14 - Paragraph
+<h1> : Example entry 15 - Heading level 1
+<h2> : Example entry 16 - Heading level 2
+<h3> : Example entry 17 - Heading level 3
+<h4> : Example entry 18 - Heading level 4
+<h5> : Example entry 19 - Heading level 5
+<h6> : Example entry 20 - Heading level 6
+<a> : Example entry 21 - Hyperlink
+<img> : Example entry 22 - Image element
+<video> : Example entry 23 - Video player
+<audio> : Example entry 24 - Audio player
+<source> : Example entry 25 - Media source
+<track> : Example entry 26 - Media text tracks
+<canvas> : Example entry 27 - Drawing area
+<svg> : Example entry 28 - SVG container
+<table> : Example entry 29 - Table container
+<tr> : Example entry 30 - Table row
+<td> : Example entry 31 - Table cell
+<th> : Example entry 32 - Table header
+<thead> : Example entry 33 - Table header group
+<tbody> : Example entry 34 - Table body group
+<tfoot> : Example entry 35 - Table footer group
+<ul> : Example entry 36 - Unordered list
+<ol> : Example entry 37 - Ordered list
+<li> : Example entry 38 - List item
+<form> : Example entry 39 - User input form
+<input> : Example entry 40 - Form input control
+<textarea> : Example entry 41 - Multiline text input
+<select> : Example entry 42 - Dropdown list
+<option> : Example entry 43 - Dropdown option
+<button> : Example entry 44 - Clickable button
+<label> : Example entry 45 - Input label
+<fieldset> : Example entry 46 - Grouping element
+<legend> : Example entry 47 - Caption for fieldset
+<datalist> : Example entry 48 - Predefined options
+<optgroup> : Example entry 49 - Option group
+<progress> : Example entry 50 - Progress indicator
+<meter> : Example entry 51 - Scalar measurement
+<iframe> : Example entry 52 - Inline frame
+<script> : Example entry 53 - Script block
+<style> : Example entry 54 - Style block
+<link> : Example entry 55 - External resource link
+<meta> : Example entry 56 - Metadata
+<base> : Example entry 57 - Base URL
+<b> : Example entry 58 - Bold text
+<strong> : Example entry 59 - Important text
+<i> : Example entry 60 - Italic text
+<em> : Example entry 61 - Emphasized text
+<u> : Example entry 62 - Underline text
+<ins> : Example entry 63 - Inserted text
+<del> : Example entry 64 - Deleted text
+<sub> : Example entry 65 - Subscript
+<sup> : Example entry 66 - Superscript
+<br> : Example entry 67 - Line break
+<hr> : Example entry 68 - Horizontal rule
+<pre> : Example entry 69 - Preformatted text
+<code> : Example entry 70 - Code snippet
+<kbd> : Example entry 71 - User input
+<samp> : Example entry 72 - Sample output
+<var> : Example entry 73 - Variable
+<q> : Example entry 74 - Inline quotation
+<blockquote> : Example entry 75 - Block quotation
+<cite> : Example entry 76 - Citation
+<small> : Example entry 77 - Small print
+<big> : Example entry 78 - Large text
+<time> : Example entry 79 - Date or time
+<mark> : Example entry 80 - Highlighted text
+<ruby> : Example entry 81 - Ruby annotation
+<rt> : Example entry 82 - Ruby text
+<rp> : Example entry 83 - Ruby parentheses
+<bdi> : Example entry 84 - BiDi isolation
+<bdo> : Example entry 85 - BiDi override
+<data> : Example entry 86 - Machine-readable data
+<template> : Example entry 87 - Client-side template
+<noscript> : Example entry 88 - Fallback for no script
+<picture> : Example entry 89 - Responsive images
+<map> : Example entry 90 - Image map
+<area> : Example entry 91 - Image map area
+<figure> : Example entry 92 - Self-contained content
+<figcaption> : Example entry 93 - Figure caption
+<details> : Example entry 94 - Disclosure widget
+<summary> : Example entry 95 - Summary for details
+<dialog> : Example entry 96 - Dialog box
+<command> : Example entry 97 - User command
+<menu> : Example entry 98 - Menu block
+<slot> : Example entry 99 - Shadow DOM slot
+<custom-element> : Example entry 100 - Example custom element
+<html> : Example entry 101 - Root of document
+<head> : Example entry 102 - Metadata container
+<title> : Example entry 103 - Title of the document
+<body> : Example entry 104 - Main document content
+<header> : Example entry 105 - Introductory section
+<footer> : Example entry 106 - Bottom section
+<main> : Example entry 107 - Primary content
+<section> : Example entry 108 - Thematic grouping
+<article> : Example entry 109 - Independent content
+<aside> : Example entry 110 - Indirectly related content
+<nav> : Example entry 111 - Navigation links
+<div> : Example entry 112 - Block container
+<span> : Example entry 113 - Inline container
+<p> : Example entry 114 - Paragraph
+<h1> : Example entry 115 - Heading level 1
+<h2> : Example entry 116 - Heading level 2
+<h3> : Example entry 117 - Heading level 3
+<h4> : Example entry 118 - Heading level 4
+<h5> : Example entry 119 - Heading level 5
+<h6> : Example entry 120 - Heading level 6
+<a> : Example entry 121 - Hyperlink
+<img> : Example entry 122 - Image element
+<video> : Example entry 123 - Video player
+<audio> : Example entry 124 - Audio player
+<source> : Example entry 125 - Media source
+<track> : Example entry 126 - Media text tracks
+<canvas> : Example entry 127 - Drawing area
+<svg> : Example entry 128 - SVG container
+<table> : Example entry 129 - Table container
+<tr> : Example entry 130 - Table row
+<td> : Example entry 131 - Table cell
+<th> : Example entry 132 - Table header
+<thead> : Example entry 133 - Table header group
+<tbody> : Example entry 134 - Table body group
+<tfoot> : Example entry 135 - Table footer group
+<ul> : Example entry 136 - Unordered list
+<ol> : Example entry 137 - Ordered list
+<li> : Example entry 138 - List item
+<form> : Example entry 139 - User input form
+<input> : Example entry 140 - Form input control
+<textarea> : Example entry 141 - Multiline text input
+<select> : Example entry 142 - Dropdown list
+<option> : Example entry 143 - Dropdown option
+<button> : Example entry 144 - Clickable button
+<label> : Example entry 145 - Input label
+<fieldset> : Example entry 146 - Grouping element
+<legend> : Example entry 147 - Caption for fieldset
+<datalist> : Example entry 148 - Predefined options
+<optgroup> : Example entry 149 - Option group
+<progress> : Example entry 150 - Progress indicator
+<meter> : Example entry 151 - Scalar measurement
+<iframe> : Example entry 152 - Inline frame
+<script> : Example entry 153 - Script block
+<style> : Example entry 154 - Style block
+<link> : Example entry 155 - External resource link
+<meta> : Example entry 156 - Metadata
+<base> : Example entry 157 - Base URL
+<b> : Example entry 158 - Bold text
+<strong> : Example entry 159 - Important text
+<i> : Example entry 160 - Italic text
+<em> : Example entry 161 - Emphasized text
+<u> : Example entry 162 - Underline text
+<ins> : Example entry 163 - Inserted text
+<del> : Example entry 164 - Deleted text
+<sub> : Example entry 165 - Subscript
+<sup> : Example entry 166 - Superscript
+<br> : Example entry 167 - Line break
+<hr> : Example entry 168 - Horizontal rule
+<pre> : Example entry 169 - Preformatted text
+<code> : Example entry 170 - Code snippet
+<kbd> : Example entry 171 - User input
+<samp> : Example entry 172 - Sample output
+<var> : Example entry 173 - Variable
+<q> : Example entry 174 - Inline quotation
+<blockquote> : Example entry 175 - Block quotation
+<cite> : Example entry 176 - Citation
+<small> : Example entry 177 - Small print
+<big> : Example entry 178 - Large text
+<time> : Example entry 179 - Date or time
+<mark> : Example entry 180 - Highlighted text
+<ruby> : Example entry 181 - Ruby annotation
+<rt> : Example entry 182 - Ruby text
+<rp> : Example entry 183 - Ruby parentheses
+<bdi> : Example entry 184 - BiDi isolation
+<bdo> : Example entry 185 - BiDi override
+<data> : Example entry 186 - Machine-readable data
+<template> : Example entry 187 - Client-side template
+<noscript> : Example entry 188 - Fallback for no script
+<picture> : Example entry 189 - Responsive images
+<map> : Example entry 190 - Image map
+<area> : Example entry 191 - Image map area
+<figure> : Example entry 192 - Self-contained content
+<figcaption> : Example entry 193 - Figure caption
+<details> : Example entry 194 - Disclosure widget
+<summary> : Example entry 195 - Summary for details
+<dialog> : Example entry 196 - Dialog box
+<command> : Example entry 197 - User command
+<menu> : Example entry 198 - Menu block
+<slot> : Example entry 199 - Shadow DOM slot
+<custom-element> : Example entry 200 - Example custom element
+<html> : Example entry 201 - Root of document
+<head> : Example entry 202 - Metadata container
+<title> : Example entry 203 - Title of the document
+<body> : Example entry 204 - Main document content
+<header> : Example entry 205 - Introductory section
+<footer> : Example entry 206 - Bottom section
+<main> : Example entry 207 - Primary content
+<section> : Example entry 208 - Thematic grouping
+<article> : Example entry 209 - Independent content
+<aside> : Example entry 210 - Indirectly related content
+<nav> : Example entry 211 - Navigation links
+<div> : Example entry 212 - Block container
+<span> : Example entry 213 - Inline container
+<p> : Example entry 214 - Paragraph
+<h1> : Example entry 215 - Heading level 1
+<h2> : Example entry 216 - Heading level 2
+<h3> : Example entry 217 - Heading level 3
+<h4> : Example entry 218 - Heading level 4
+<h5> : Example entry 219 - Heading level 5
+<h6> : Example entry 220 - Heading level 6
+<a> : Example entry 221 - Hyperlink
+<img> : Example entry 222 - Image element
+<video> : Example entry 223 - Video player
+<audio> : Example entry 224 - Audio player
+<source> : Example entry 225 - Media source
+<track> : Example entry 226 - Media text tracks
+<canvas> : Example entry 227 - Drawing area
+<svg> : Example entry 228 - SVG container
+<table> : Example entry 229 - Table container
+<tr> : Example entry 230 - Table row
+<td> : Example entry 231 - Table cell
+<th> : Example entry 232 - Table header
+<thead> : Example entry 233 - Table header group
+<tbody> : Example entry 234 - Table body group
+<tfoot> : Example entry 235 - Table footer group
+<ul> : Example entry 236 - Unordered list
+<ol> : Example entry 237 - Ordered list
+<li> : Example entry 238 - List item
+<form> : Example entry 239 - User input form
+<input> : Example entry 240 - Form input control
+<textarea> : Example entry 241 - Multiline text input
+<select> : Example entry 242 - Dropdown list
+<option> : Example entry 243 - Dropdown option
+<button> : Example entry 244 - Clickable button
+<label> : Example entry 245 - Input label
+<fieldset> : Example entry 246 - Grouping element
+<legend> : Example entry 247 - Caption for fieldset
+<datalist> : Example entry 248 - Predefined options
+<optgroup> : Example entry 249 - Option group
+<progress> : Example entry 250 - Progress indicator
+<meter> : Example entry 251 - Scalar measurement
+<iframe> : Example entry 252 - Inline frame
+<script> : Example entry 253 - Script block
+<style> : Example entry 254 - Style block
+<link> : Example entry 255 - External resource link
+<meta> : Example entry 256 - Metadata
+<base> : Example entry 257 - Base URL
+<b> : Example entry 258 - Bold text
+<strong> : Example entry 259 - Important text
+<i> : Example entry 260 - Italic text
+<em> : Example entry 261 - Emphasized text
+<u> : Example entry 262 - Underline text
+<ins> : Example entry 263 - Inserted text
+<del> : Example entry 264 - Deleted text
+<sub> : Example entry 265 - Subscript
+<sup> : Example entry 266 - Superscript
+<br> : Example entry 267 - Line break
+<hr> : Example entry 268 - Horizontal rule
+<pre> : Example entry 269 - Preformatted text
+<code> : Example entry 270 - Code snippet
+<kbd> : Example entry 271 - User input
+<samp> : Example entry 272 - Sample output
+<var> : Example entry 273 - Variable
+<q> : Example entry 274 - Inline quotation
+<blockquote> : Example entry 275 - Block quotation
+<cite> : Example entry 276 - Citation
+<small> : Example entry 277 - Small print
+<big> : Example entry 278 - Large text
+<time> : Example entry 279 - Date or time
+<mark> : Example entry 280 - Highlighted text
+<ruby> : Example entry 281 - Ruby annotation
+<rt> : Example entry 282 - Ruby text
+<rp> : Example entry 283 - Ruby parentheses
+<bdi> : Example entry 284 - BiDi isolation
+<bdo> : Example entry 285 - BiDi override
+<data> : Example entry 286 - Machine-readable data
+<template> : Example entry 287 - Client-side template
+<noscript> : Example entry 288 - Fallback for no script
+<picture> : Example entry 289 - Responsive images
+<map> : Example entry 290 - Image map
+<area> : Example entry 291 - Image map area
+<figure> : Example entry 292 - Self-contained content
+<figcaption> : Example entry 293 - Figure caption
+<details> : Example entry 294 - Disclosure widget
+<summary> : Example entry 295 - Summary for details
+<dialog> : Example entry 296 - Dialog box
+<command> : Example entry 297 - User command
+<menu> : Example entry 298 - Menu block
+<slot> : Example entry 299 - Shadow DOM slot
+<custom-element> : Example entry 300 - Example custom element
+<html> : Example entry 301 - Root of document
+<head> : Example entry 302 - Metadata container
+<title> : Example entry 303 - Title of the document
+<body> : Example entry 304 - Main document content
+<header> : Example entry 305 - Introductory section
+<footer> : Example entry 306 - Bottom section
+<main> : Example entry 307 - Primary content
+<section> : Example entry 308 - Thematic grouping
+<article> : Example entry 309 - Independent content
+<aside> : Example entry 310 - Indirectly related content
+<nav> : Example entry 311 - Navigation links
+<div> : Example entry 312 - Block container
+<span> : Example entry 313 - Inline container
+<p> : Example entry 314 - Paragraph
+<h1> : Example entry 315 - Heading level 1
+<h2> : Example entry 316 - Heading level 2
+<h3> : Example entry 317 - Heading level 3
+<h4> : Example entry 318 - Heading level 4
+<h5> : Example entry 319 - Heading level 5
+<h6> : Example entry 320 - Heading level 6
+<a> : Example entry 321 - Hyperlink
+<img> : Example entry 322 - Image element
+<video> : Example entry 323 - Video player
+<audio> : Example entry 324 - Audio player
+<source> : Example entry 325 - Media source
+<track> : Example entry 326 - Media text tracks
+<canvas> : Example entry 327 - Drawing area
+<svg> : Example entry 328 - SVG container
+<table> : Example entry 329 - Table container
+<tr> : Example entry 330 - Table row
+<td> : Example entry 331 - Table cell
+<th> : Example entry 332 - Table header
+<thead> : Example entry 333 - Table header group
+<tbody> : Example entry 334 - Table body group
+<tfoot> : Example entry 335 - Table footer group
+<ul> : Example entry 336 - Unordered list
+<ol> : Example entry 337 - Ordered list
+<li> : Example entry 338 - List item
+<form> : Example entry 339 - User input form
+<input> : Example entry 340 - Form input control
+<textarea> : Example entry 341 - Multiline text input
+<select> : Example entry 342 - Dropdown list
+<option> : Example entry 343 - Dropdown option
+<button> : Example entry 344 - Clickable button
+<label> : Example entry 345 - Input label
+<fieldset> : Example entry 346 - Grouping element
+<legend> : Example entry 347 - Caption for fieldset
+<datalist> : Example entry 348 - Predefined options
+<optgroup> : Example entry 349 - Option group
+<progress> : Example entry 350 - Progress indicator
+<meter> : Example entry 351 - Scalar measurement
+<iframe> : Example entry 352 - Inline frame
+<script> : Example entry 353 - Script block
+<style> : Example entry 354 - Style block
+<link> : Example entry 355 - External resource link
+<meta> : Example entry 356 - Metadata
+<base> : Example entry 357 - Base URL
+<b> : Example entry 358 - Bold text
+<strong> : Example entry 359 - Important text
+<i> : Example entry 360 - Italic text
+<em> : Example entry 361 - Emphasized text
+<u> : Example entry 362 - Underline text
+<ins> : Example entry 363 - Inserted text
+<del> : Example entry 364 - Deleted text
+<sub> : Example entry 365 - Subscript
+<sup> : Example entry 366 - Superscript
+<br> : Example entry 367 - Line break
+<hr> : Example entry 368 - Horizontal rule
+<pre> : Example entry 369 - Preformatted text
+<code> : Example entry 370 - Code snippet
+<kbd> : Example entry 371 - User input
+<samp> : Example entry 372 - Sample output
+<var> : Example entry 373 - Variable
+<q> : Example entry 374 - Inline quotation
+<blockquote> : Example entry 375 - Block quotation
+<cite> : Example entry 376 - Citation
+<small> : Example entry 377 - Small print
+<big> : Example entry 378 - Large text
+<time> : Example entry 379 - Date or time
+<mark> : Example entry 380 - Highlighted text
+<ruby> : Example entry 381 - Ruby annotation
+<rt> : Example entry 382 - Ruby text
+<rp> : Example entry 383 - Ruby parentheses
+<bdi> : Example entry 384 - BiDi isolation
+<bdo> : Example entry 385 - BiDi override
+<data> : Example entry 386 - Machine-readable data
+<template> : Example entry 387 - Client-side template
+<noscript> : Example entry 388 - Fallback for no script
+<picture> : Example entry 389 - Responsive images
+<map> : Example entry 390 - Image map
+<area> : Example entry 391 - Image map area
+<figure> : Example entry 392 - Self-contained content
+<figcaption> : Example entry 393 - Figure caption
+<details> : Example entry 394 - Disclosure widget
+<summary> : Example entry 395 - Summary for details
+<dialog> : Example entry 396 - Dialog box
+<command> : Example entry 397 - User command
+<menu> : Example entry 398 - Menu block
+<slot> : Example entry 399 - Shadow DOM slot
+<custom-element> : Example entry 400 - Example custom element
+<html> : Example entry 401 - Root of document
+<head> : Example entry 402 - Metadata container
+<title> : Example entry 403 - Title of the document
+<body> : Example entry 404 - Main document content
+<header> : Example entry 405 - Introductory section
+<footer> : Example entry 406 - Bottom section
+<main> : Example entry 407 - Primary content
+<section> : Example entry 408 - Thematic grouping
+<article> : Example entry 409 - Independent content
+<aside> : Example entry 410 - Indirectly related content
+<nav> : Example entry 411 - Navigation links
+<div> : Example entry 412 - Block container
+<span> : Example entry 413 - Inline container
+<p> : Example entry 414 - Paragraph
+<h1> : Example entry 415 - Heading level 1
+<h2> : Example entry 416 - Heading level 2
+<h3> : Example entry 417 - Heading level 3
+<h4> : Example entry 418 - Heading level 4
+<h5> : Example entry 419 - Heading level 5
+<h6> : Example entry 420 - Heading level 6
+<a> : Example entry 421 - Hyperlink
+<img> : Example entry 422 - Image element
+<video> : Example entry 423 - Video player
+<audio> : Example entry 424 - Audio player
+<source> : Example entry 425 - Media source
+<track> : Example entry 426 - Media text tracks
+<canvas> : Example entry 427 - Drawing area
+<svg> : Example entry 428 - SVG container
+<table> : Example entry 429 - Table container
+<tr> : Example entry 430 - Table row
+<td> : Example entry 431 - Table cell
+<th> : Example entry 432 - Table header
+<thead> : Example entry 433 - Table header group
+<tbody> : Example entry 434 - Table body group
+<tfoot> : Example entry 435 - Table footer group
+<ul> : Example entry 436 - Unordered list
+<ol> : Example entry 437 - Ordered list
+<li> : Example entry 438 - List item
+<form> : Example entry 439 - User input form
+<input> : Example entry 440 - Form input control
+<textarea> : Example entry 441 - Multiline text input
+<select> : Example entry 442 - Dropdown list
+<option> : Example entry 443 - Dropdown option
+<button> : Example entry 444 - Clickable button
+<label> : Example entry 445 - Input label
+<fieldset> : Example entry 446 - Grouping element
+<legend> : Example entry 447 - Caption for fieldset
+<datalist> : Example entry 448 - Predefined options
+<optgroup> : Example entry 449 - Option group
+<progress> : Example entry 450 - Progress indicator
+<meter> : Example entry 451 - Scalar measurement
+<iframe> : Example entry 452 - Inline frame
+<script> : Example entry 453 - Script block
+<style> : Example entry 454 - Style block
+<link> : Example entry 455 - External resource link
+<meta> : Example entry 456 - Metadata
+<base> : Example entry 457 - Base URL
+<b> : Example entry 458 - Bold text
+<strong> : Example entry 459 - Important text
+<i> : Example entry 460 - Italic text
+<em> : Example entry 461 - Emphasized text
+<u> : Example entry 462 - Underline text
+<ins> : Example entry 463 - Inserted text
+<del> : Example entry 464 - Deleted text
+<sub> : Example entry 465 - Subscript
+<sup> : Example entry 466 - Superscript
+<br> : Example entry 467 - Line break
+<hr> : Example entry 468 - Horizontal rule
+<pre> : Example entry 469 - Preformatted text
+<code> : Example entry 470 - Code snippet
+<kbd> : Example entry 471 - User input
+<samp> : Example entry 472 - Sample output
+<var> : Example entry 473 - Variable
+<q> : Example entry 474 - Inline quotation
+<blockquote> : Example entry 475 - Block quotation
+<cite> : Example entry 476 - Citation
+<small> : Example entry 477 - Small print
+<big> : Example entry 478 - Large text
+<time> : Example entry 479 - Date or time
+<mark> : Example entry 480 - Highlighted text
+<ruby> : Example entry 481 - Ruby annotation
+<rt> : Example entry 482 - Ruby text
+<rp> : Example entry 483 - Ruby parentheses
+<bdi> : Example entry 484 - BiDi isolation
+<bdo> : Example entry 485 - BiDi override
+<data> : Example entry 486 - Machine-readable data
+<template> : Example entry 487 - Client-side template
+<noscript> : Example entry 488 - Fallback for no script
+<picture> : Example entry 489 - Responsive images
+<map> : Example entry 490 - Image map
+<area> : Example entry 491 - Image map area
+<figure> : Example entry 492 - Self-contained content
+<figcaption> : Example entry 493 - Figure caption
+<details> : Example entry 494 - Disclosure widget
+<summary> : Example entry 495 - Summary for details
+<dialog> : Example entry 496 - Dialog box
+<command> : Example entry 497 - User command
+<menu> : Example entry 498 - Menu block
+<slot> : Example entry 499 - Shadow DOM slot
+<custom-element> : Example entry 500 - Example custom element
+<html> : Example entry 501 - Root of document
+<head> : Example entry 502 - Metadata container
+<title> : Example entry 503 - Title of the document
+<body> : Example entry 504 - Main document content
+<header> : Example entry 505 - Introductory section
+<footer> : Example entry 506 - Bottom section
+<main> : Example entry 507 - Primary content
+<section> : Example entry 508 - Thematic grouping
+<article> : Example entry 509 - Independent content
+<aside> : Example entry 510 - Indirectly related content
+<nav> : Example entry 511 - Navigation links
+<div> : Example entry 512 - Block container
+<span> : Example entry 513 - Inline container
+<p> : Example entry 514 - Paragraph
+<h1> : Example entry 515 - Heading level 1
+<h2> : Example entry 516 - Heading level 2
+<h3> : Example entry 517 - Heading level 3
+<h4> : Example entry 518 - Heading level 4
+<h5> : Example entry 519 - Heading level 5
+<h6> : Example entry 520 - Heading level 6
+<a> : Example entry 521 - Hyperlink
+<img> : Example entry 522 - Image element
+<video> : Example entry 523 - Video player
+<audio> : Example entry 524 - Audio player
+<source> : Example entry 525 - Media source
+<track> : Example entry 526 - Media text tracks
+<canvas> : Example entry 527 - Drawing area
+<svg> : Example entry 528 - SVG container
+<table> : Example entry 529 - Table container
+<tr> : Example entry 530 - Table row
+<td> : Example entry 531 - Table cell
+<th> : Example entry 532 - Table header
+<thead> : Example entry 533 - Table header group
+<tbody> : Example entry 534 - Table body group
+<tfoot> : Example entry 535 - Table footer group
+<ul> : Example entry 536 - Unordered list
+<ol> : Example entry 537 - Ordered list
+<li> : Example entry 538 - List item
+<form> : Example entry 539 - User input form
+<input> : Example entry 540 - Form input control
+<textarea> : Example entry 541 - Multiline text input
+<select> : Example entry 542 - Dropdown list
+<option> : Example entry 543 - Dropdown option
+<button> : Example entry 544 - Clickable button
+<label> : Example entry 545 - Input label
+<fieldset> : Example entry 546 - Grouping element
+<legend> : Example entry 547 - Caption for fieldset
+<datalist> : Example entry 548 - Predefined options
+<optgroup> : Example entry 549 - Option group
+<progress> : Example entry 550 - Progress indicator
+<meter> : Example entry 551 - Scalar measurement
+<iframe> : Example entry 552 - Inline frame
+<script> : Example entry 553 - Script block
+<style> : Example entry 554 - Style block
+<link> : Example entry 555 - External resource link
+<meta> : Example entry 556 - Metadata
+<base> : Example entry 557 - Base URL
+<b> : Example entry 558 - Bold text
+<strong> : Example entry 559 - Important text
+<i> : Example entry 560 - Italic text
+<em> : Example entry 561 - Emphasized text
+<u> : Example entry 562 - Underline text
+<ins> : Example entry 563 - Inserted text
+<del> : Example entry 564 - Deleted text
+<sub> : Example entry 565 - Subscript
+<sup> : Example entry 566 - Superscript
+<br> : Example entry 567 - Line break
+<hr> : Example entry 568 - Horizontal rule
+<pre> : Example entry 569 - Preformatted text
+<code> : Example entry 570 - Code snippet
+<kbd> : Example entry 571 - User input
+<samp> : Example entry 572 - Sample output
+<var> : Example entry 573 - Variable
+<q> : Example entry 574 - Inline quotation
+<blockquote> : Example entry 575 - Block quotation
+<cite> : Example entry 576 - Citation
+<small> : Example entry 577 - Small print
+<big> : Example entry 578 - Large text
+<time> : Example entry 579 - Date or time
+<mark> : Example entry 580 - Highlighted text
+<ruby> : Example entry 581 - Ruby annotation
+<rt> : Example entry 582 - Ruby text
+<rp> : Example entry 583 - Ruby parentheses
+<bdi> : Example entry 584 - BiDi isolation
+<bdo> : Example entry 585 - BiDi override
+<data> : Example entry 586 - Machine-readable data
+<template> : Example entry 587 - Client-side template
+<noscript> : Example entry 588 - Fallback for no script
+<picture> : Example entry 589 - Responsive images
+<map> : Example entry 590 - Image map
+<area> : Example entry 591 - Image map area
+<figure> : Example entry 592 - Self-contained content
+<figcaption> : Example entry 593 - Figure caption
+<details> : Example entry 594 - Disclosure widget
+<summary> : Example entry 595 - Summary for details
+<dialog> : Example entry 596 - Dialog box
+<command> : Example entry 597 - User command
+<menu> : Example entry 598 - Menu block
+<slot> : Example entry 599 - Shadow DOM slot
+<custom-element> : Example entry 600 - Example custom element
+<html> : Example entry 601 - Root of document
+<head> : Example entry 602 - Metadata container
+<title> : Example entry 603 - Title of the document
+<body> : Example entry 604 - Main document content
+<header> : Example entry 605 - Introductory section
+<footer> : Example entry 606 - Bottom section
+<main> : Example entry 607 - Primary content
+<section> : Example entry 608 - Thematic grouping
+<article> : Example entry 609 - Independent content
+<aside> : Example entry 610 - Indirectly related content
+<nav> : Example entry 611 - Navigation links
+<div> : Example entry 612 - Block container
+<span> : Example entry 613 - Inline container
+<p> : Example entry 614 - Paragraph
+<h1> : Example entry 615 - Heading level 1
+<h2> : Example entry 616 - Heading level 2
+<h3> : Example entry 617 - Heading level 3
+<h4> : Example entry 618 - Heading level 4
+<h5> : Example entry 619 - Heading level 5
+<h6> : Example entry 620 - Heading level 6
+<a> : Example entry 621 - Hyperlink
+<img> : Example entry 622 - Image element
+<video> : Example entry 623 - Video player
+<audio> : Example entry 624 - Audio player
+<source> : Example entry 625 - Media source
+<track> : Example entry 626 - Media text tracks
+<canvas> : Example entry 627 - Drawing area
+<svg> : Example entry 628 - SVG container
+<table> : Example entry 629 - Table container
+<tr> : Example entry 630 - Table row
+<td> : Example entry 631 - Table cell
+<th> : Example entry 632 - Table header
+<thead> : Example entry 633 - Table header group
+<tbody> : Example entry 634 - Table body group
+<tfoot> : Example entry 635 - Table footer group
+<ul> : Example entry 636 - Unordered list
+<ol> : Example entry 637 - Ordered list
+<li> : Example entry 638 - List item
+<form> : Example entry 639 - User input form
+<input> : Example entry 640 - Form input control
+<textarea> : Example entry 641 - Multiline text input
+<select> : Example entry 642 - Dropdown list
+<option> : Example entry 643 - Dropdown option
+<button> : Example entry 644 - Clickable button
+<label> : Example entry 645 - Input label
+<fieldset> : Example entry 646 - Grouping element
+<legend> : Example entry 647 - Caption for fieldset
+<datalist> : Example entry 648 - Predefined options
+<optgroup> : Example entry 649 - Option group
+<progress> : Example entry 650 - Progress indicator
+<meter> : Example entry 651 - Scalar measurement
+<iframe> : Example entry 652 - Inline frame
+<script> : Example entry 653 - Script block
+<style> : Example entry 654 - Style block
+<link> : Example entry 655 - External resource link
+<meta> : Example entry 656 - Metadata
+<base> : Example entry 657 - Base URL
+<b> : Example entry 658 - Bold text
+<strong> : Example entry 659 - Important text
+<i> : Example entry 660 - Italic text
+<em> : Example entry 661 - Emphasized text
+<u> : Example entry 662 - Underline text
+<ins> : Example entry 663 - Inserted text
+<del> : Example entry 664 - Deleted text
+<sub> : Example entry 665 - Subscript
+<sup> : Example entry 666 - Superscript
+<br> : Example entry 667 - Line break
+<hr> : Example entry 668 - Horizontal rule
+<pre> : Example entry 669 - Preformatted text
+<code> : Example entry 670 - Code snippet
+<kbd> : Example entry 671 - User input
+<samp> : Example entry 672 - Sample output
+<var> : Example entry 673 - Variable
+<q> : Example entry 674 - Inline quotation
+<blockquote> : Example entry 675 - Block quotation
+<cite> : Example entry 676 - Citation
+<small> : Example entry 677 - Small print
+<big> : Example entry 678 - Large text
+<time> : Example entry 679 - Date or time
+<mark> : Example entry 680 - Highlighted text
+<ruby> : Example entry 681 - Ruby annotation
+<rt> : Example entry 682 - Ruby text
+<rp> : Example entry 683 - Ruby parentheses
+<bdi> : Example entry 684 - BiDi isolation
+<bdo> : Example entry 685 - BiDi override
+<data> : Example entry 686 - Machine-readable data
+<template> : Example entry 687 - Client-side template
+<noscript> : Example entry 688 - Fallback for no script
+<picture> : Example entry 689 - Responsive images
+<map> : Example entry 690 - Image map
+<area> : Example entry 691 - Image map area
+<figure> : Example entry 692 - Self-contained content
+<figcaption> : Example entry 693 - Figure caption
+<details> : Example entry 694 - Disclosure widget
+<summary> : Example entry 695 - Summary for details
+<dialog> : Example entry 696 - Dialog box
+<command> : Example entry 697 - User command
+<menu> : Example entry 698 - Menu block
+<slot> : Example entry 699 - Shadow DOM slot
+<custom-element> : Example entry 700 - Example custom element
+<html> : Example entry 701 - Root of document
+<head> : Example entry 702 - Metadata container
+<title> : Example entry 703 - Title of the document
+<body> : Example entry 704 - Main document content
+<header> : Example entry 705 - Introductory section
+<footer> : Example entry 706 - Bottom section
+<main> : Example entry 707 - Primary content
+<section> : Example entry 708 - Thematic grouping
+<article> : Example entry 709 - Independent content
+<aside> : Example entry 710 - Indirectly related content
+<nav> : Example entry 711 - Navigation links
+<div> : Example entry 712 - Block container
+<span> : Example entry 713 - Inline container
+<p> : Example entry 714 - Paragraph
+<h1> : Example entry 715 - Heading level 1
+<h2> : Example entry 716 - Heading level 2
+<h3> : Example entry 717 - Heading level 3
+<h4> : Example entry 718 - Heading level 4
+<h5> : Example entry 719 - Heading level 5
+<h6> : Example entry 720 - Heading level 6
+<a> : Example entry 721 - Hyperlink
+<img> : Example entry 722 - Image element
+<video> : Example entry 723 - Video player
+<audio> : Example entry 724 - Audio player
+<source> : Example entry 725 - Media source
+<track> : Example entry 726 - Media text tracks
+<canvas> : Example entry 727 - Drawing area
+<svg> : Example entry 728 - SVG container
+<table> : Example entry 729 - Table container
+<tr> : Example entry 730 - Table row
+<td> : Example entry 731 - Table cell
+<th> : Example entry 732 - Table header
+<thead> : Example entry 733 - Table header group
+<tbody> : Example entry 734 - Table body group
+<tfoot> : Example entry 735 - Table footer group
+<ul> : Example entry 736 - Unordered list
+<ol> : Example entry 737 - Ordered list
+<li> : Example entry 738 - List item
+<form> : Example entry 739 - User input form
+<input> : Example entry 740 - Form input control
+<textarea> : Example entry 741 - Multiline text input
+<select> : Example entry 742 - Dropdown list
+<option> : Example entry 743 - Dropdown option
+<button> : Example entry 744 - Clickable button
+<label> : Example entry 745 - Input label
+<fieldset> : Example entry 746 - Grouping element
+<legend> : Example entry 747 - Caption for fieldset
+<datalist> : Example entry 748 - Predefined options
+<optgroup> : Example entry 749 - Option group
+<progress> : Example entry 750 - Progress indicator
+<meter> : Example entry 751 - Scalar measurement
+<iframe> : Example entry 752 - Inline frame
+<script> : Example entry 753 - Script block
+<style> : Example entry 754 - Style block
+<link> : Example entry 755 - External resource link
+<meta> : Example entry 756 - Metadata
+<base> : Example entry 757 - Base URL
+<b> : Example entry 758 - Bold text
+<strong> : Example entry 759 - Important text
+<i> : Example entry 760 - Italic text
+<em> : Example entry 761 - Emphasized text
+<u> : Example entry 762 - Underline text
+<ins> : Example entry 763 - Inserted text
+<del> : Example entry 764 - Deleted text
+<sub> : Example entry 765 - Subscript
+<sup> : Example entry 766 - Superscript
+<br> : Example entry 767 - Line break
+<hr> : Example entry 768 - Horizontal rule
+<pre> : Example entry 769 - Preformatted text
+<code> : Example entry 770 - Code snippet
+<kbd> : Example entry 771 - User input
+<samp> : Example entry 772 - Sample output
+<var> : Example entry 773 - Variable
+<q> : Example entry 774 - Inline quotation
+<blockquote> : Example entry 775 - Block quotation
+<cite> : Example entry 776 - Citation
+<small> : Example entry 777 - Small print
+<big> : Example entry 778 - Large text
+<time> : Example entry 779 - Date or time
+<mark> : Example entry 780 - Highlighted text
+<ruby> : Example entry 781 - Ruby annotation
+<rt> : Example entry 782 - Ruby text
+<rp> : Example entry 783 - Ruby parentheses
+<bdi> : Example entry 784 - BiDi isolation
+<bdo> : Example entry 785 - BiDi override
+<data> : Example entry 786 - Machine-readable data
+<template> : Example entry 787 - Client-side template
+<noscript> : Example entry 788 - Fallback for no script
+<picture> : Example entry 789 - Responsive images
+<map> : Example entry 790 - Image map
+<area> : Example entry 791 - Image map area
+<figure> : Example entry 792 - Self-contained content
+<figcaption> : Example entry 793 - Figure caption
+<details> : Example entry 794 - Disclosure widget
+<summary> : Example entry 795 - Summary for details
+<dialog> : Example entry 796 - Dialog box
+<command> : Example entry 797 - User command
+<menu> : Example entry 798 - Menu block
+<slot> : Example entry 799 - Shadow DOM slot
+<custom-element> : Example entry 800 - Example custom element

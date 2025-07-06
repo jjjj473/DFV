@@ -1,0 +1,15 @@
+# Static Site Builder AI
+
+This model is trained on the HTML and JavaScript reference files in this repository. It can generate a basic website structure, incorporating:
+- Page layout with `<header>`, `<main>`, and `<footer>` tags from `html_tags_overview.txt`
+- Text formatting using the tags in `html_tags_text.txt`
+- Media embedding via examples from `html_tags_media.txt`
+- Form handling features described in `html_tags_forms.txt`
+
+Using the JavaScript examples, the model scripts interactive behavior such as:
+- Selecting elements with `document.querySelector()`
+- Updating text content and styles
+- Loading images or videos dynamically
+- Validating and submitting forms
+
+The result is a static site template with interactive elements ready for customization.

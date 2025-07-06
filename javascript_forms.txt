@@ -1,0 +1,52 @@
+# JavaScript for Forms
+
+const form = document.querySelector('form'); : Reference a form element.
+form.addEventListener('submit', handleSubmit); : Intercept a form submission.
+const input = document.querySelector('input'); : Reference a specific input.
+input.value : Get or set the current value.
+input.addEventListener('input', handleInput); : React to user typing.
+
+const select = document.querySelector('select'); : Reference a drop-down list.
+select.value : Retrieve the selected option value.
+select.addEventListener('change', handleChange); : Respond when the option changes.
+
+document.forms[0] : Access the first form in the document.
+new FormData(form); : Collect all fields for submission.
+event.preventDefault(); : Prevent the browser's default form submission.
+form.reset(); : Clear user input and reset the form.
+
+const form = document.querySelector('form');
+form.addEventListener('submit', e => e.preventDefault());
+const data = new FormData(form);
+fetch('/submit', { method: 'POST', body: data });
+document.querySelector('input[name="email"]').value = 'user@example.com';
+document.querySelector('button[type="reset"]').click();
+document.querySelector('select').selectedIndex = 1;
+const checkbox = document.querySelector('input[type="checkbox"]');
+checkbox.checked = true;
+form.reset();
+document.querySelector('label').textContent = 'Your Name:';
+const fieldset = document.createElement('fieldset');
+form.appendChild(fieldset);
+const legend = document.createElement('legend');
+legend.textContent = 'Details';
+fieldset.appendChild(legend);
+
+form.checkValidity();
+const textarea = document.querySelector('textarea');
+textarea.value = 'Default';
+document.querySelector('select').selectedOptions[0].text;
+const radio = document.querySelector('input[type="radio"]');
+radio.checked = true;
+new URLSearchParams(new FormData(form)).toString();
+form.querySelector('input[type="password"]').value = 'secret';
+form.classList.add('submitted');
+document.querySelector('input[type="file"]').files[0];
+form.addEventListener('reset', handleReset);
+document.querySelector('button[type="submit"]').disabled = true;
+form.addEventListener('change', () => console.log('changed'));
+form.querySelectorAll('input').forEach(i => i.required = true);
+document.querySelector('input').focus();
+document.activeElement.blur();
+form.insertAdjacentHTML('beforeend', '<input type="hidden" name="token" value="123">');
+These lines explain how scripts interact with the form tags described in the HTML dataset.

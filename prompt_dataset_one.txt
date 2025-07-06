@@ -1,0 +1,800 @@
+What does <html> represent in HTML?
+What does <head> represent in HTML?
+What does <title> represent in HTML?
+What does <body> represent in HTML?
+What does <header> represent in HTML?
+What does <footer> represent in HTML?
+What does <nav> represent in HTML?
+What does <main> represent in HTML?
+What does <section> represent in HTML?
+What does <article> represent in HTML?
+What does <aside> represent in HTML?
+What does <!--...--> represent in HTML?
+What does <!DOCTYPE> represent in HTML?
+What does <a> represent in HTML?
+What does <abbr> represent in HTML?
+What does <address> represent in HTML?
+What does <area> represent in HTML?
+What does <b> represent in HTML?
+What does <base> represent in HTML?
+What does <bdi> represent in HTML?
+What does <bdo> represent in HTML?
+What does <blockquote> represent in HTML?
+What does <body> represent in HTML?
+What does <br> represent in HTML?
+What does <button> represent in HTML?
+What does <canvas> represent in HTML?
+What does <caption> represent in HTML?
+What does <cite> represent in HTML?
+What does <code> represent in HTML?
+What does <col> represent in HTML?
+What does <colgroup> represent in HTML?
+What does <data> represent in HTML?
+What does <datalist> represent in HTML?
+What does <dd> represent in HTML?
+What does <del> represent in HTML?
+What does <details> represent in HTML?
+What does <dfn> represent in HTML?
+What does <dialog> represent in HTML?
+What does <div> represent in HTML?
+What does <dl> represent in HTML?
+What does <dt> represent in HTML?
+What does <em> represent in HTML?
+What does <embed> represent in HTML?
+What does <fieldset> represent in HTML?
+What does <footer> represent in HTML?
+What does <form> represent in HTML?
+What does <head> represent in HTML?
+What does <header> represent in HTML?
+What does <hgroup> represent in HTML?
+What does <hr> represent in HTML?
+What does <html> represent in HTML?
+What does <i> represent in HTML?
+What does <iframe> represent in HTML?
+What does <img> represent in HTML?
+What does <input> represent in HTML?
+What does <ins> represent in HTML?
+What does <kbd> represent in HTML?
+What does <label> represent in HTML?
+What does <legend> represent in HTML?
+What does <li> represent in HTML?
+What does <link> represent in HTML?
+What does <main> represent in HTML?
+What does <map> represent in HTML?
+What does <mark> represent in HTML?
+What does <menu> represent in HTML?
+What does <meta> represent in HTML?
+What does <meter> represent in HTML?
+What does <nav> represent in HTML?
+What does <noscript> represent in HTML?
+What does <object> represent in HTML?
+What does <ol> represent in HTML?
+What does <optgroup> represent in HTML?
+What does <option> represent in HTML?
+What does <output> represent in HTML?
+What does <p> represent in HTML?
+What does <param> represent in HTML?
+What does <picture> represent in HTML?
+What does <pre> represent in HTML?
+What does <progress> represent in HTML?
+What does <q> represent in HTML?
+What does <rp> represent in HTML?
+What does <rt> represent in HTML?
+What does <ruby> represent in HTML?
+What does <s> represent in HTML?
+What does <samp> represent in HTML?
+What does <script> represent in HTML?
+What does <search> represent in HTML?
+What does <section> represent in HTML?
+What does <select> represent in HTML?
+What does <small> represent in HTML?
+What does <source> represent in HTML?
+What does <span> represent in HTML?
+What does <strong> represent in HTML?
+What does <style> represent in HTML?
+What does <sub> represent in HTML?
+What does <summary> represent in HTML?
+What does <sup> represent in HTML?
+What does <svg> represent in HTML?
+What does <table> represent in HTML?
+What does <tbody> represent in HTML?
+What does <td> represent in HTML?
+What does <template> represent in HTML?
+What does <textarea> represent in HTML?
+What does <tfoot> represent in HTML?
+What does <th> represent in HTML?
+What does <thead> represent in HTML?
+What does <time> represent in HTML?
+What does <title> represent in HTML?
+What does <tr> represent in HTML?
+What does <track> represent in HTML?
+What does <html> represent in HTML?
+What does <head> represent in HTML?
+What does <title> represent in HTML?
+What does <body> represent in HTML?
+What does <header> represent in HTML?
+What does <footer> represent in HTML?
+What does <main> represent in HTML?
+What does <section> represent in HTML?
+What does <article> represent in HTML?
+What does <aside> represent in HTML?
+What does <nav> represent in HTML?
+What does <div> represent in HTML?
+What does <span> represent in HTML?
+What does <p> represent in HTML?
+What does <h1> represent in HTML?
+What does <h2> represent in HTML?
+What does <h3> represent in HTML?
+What does <h4> represent in HTML?
+What does <h5> represent in HTML?
+What does <h6> represent in HTML?
+What does <a> represent in HTML?
+What does <img> represent in HTML?
+What does <video> represent in HTML?
+What does <audio> represent in HTML?
+What does <source> represent in HTML?
+What does <track> represent in HTML?
+What does <canvas> represent in HTML?
+What does <svg> represent in HTML?
+What does <table> represent in HTML?
+What does <tr> represent in HTML?
+What does <td> represent in HTML?
+What does <th> represent in HTML?
+What does <thead> represent in HTML?
+What does <tbody> represent in HTML?
+What does <tfoot> represent in HTML?
+What does <ul> represent in HTML?
+What does <ol> represent in HTML?
+What does <li> represent in HTML?
+What does <form> represent in HTML?
+What does <input> represent in HTML?
+What does <textarea> represent in HTML?
+What does <select> represent in HTML?
+What does <option> represent in HTML?
+What does <button> represent in HTML?
+What does <label> represent in HTML?
+What does <fieldset> represent in HTML?
+What does <legend> represent in HTML?
+What does <datalist> represent in HTML?
+What does <optgroup> represent in HTML?
+What does <progress> represent in HTML?
+What does <meter> represent in HTML?
+What does <iframe> represent in HTML?
+What does <script> represent in HTML?
+What does <style> represent in HTML?
+What does <link> represent in HTML?
+What does <meta> represent in HTML?
+What does <base> represent in HTML?
+What does <b> represent in HTML?
+What does <strong> represent in HTML?
+What does <i> represent in HTML?
+What does <em> represent in HTML?
+What does <u> represent in HTML?
+What does <ins> represent in HTML?
+What does <del> represent in HTML?
+What does <sub> represent in HTML?
+What does <sup> represent in HTML?
+What does <br> represent in HTML?
+What does <hr> represent in HTML?
+What does <pre> represent in HTML?
+What does <code> represent in HTML?
+What does <kbd> represent in HTML?
+What does <samp> represent in HTML?
+What does <var> represent in HTML?
+What does <q> represent in HTML?
+What does <blockquote> represent in HTML?
+What does <cite> represent in HTML?
+What does <small> represent in HTML?
+What does <big> represent in HTML?
+What does <time> represent in HTML?
+What does <mark> represent in HTML?
+What does <ruby> represent in HTML?
+What does <rt> represent in HTML?
+What does <rp> represent in HTML?
+What does <bdi> represent in HTML?
+What does <bdo> represent in HTML?
+What does <data> represent in HTML?
+What does <template> represent in HTML?
+What does <noscript> represent in HTML?
+What does <picture> represent in HTML?
+What does <map> represent in HTML?
+What does <area> represent in HTML?
+What does <figure> represent in HTML?
+What does <figcaption> represent in HTML?
+What does <details> represent in HTML?
+What does <summary> represent in HTML?
+What does <dialog> represent in HTML?
+What does <command> represent in HTML?
+What does <menu> represent in HTML?
+What does <slot> represent in HTML?
+What does <custom-element> represent in HTML?
+What does <html> represent in HTML?
+What does <head> represent in HTML?
+What does <title> represent in HTML?
+What does <body> represent in HTML?
+What does <header> represent in HTML?
+What does <footer> represent in HTML?
+What does <main> represent in HTML?
+What does <section> represent in HTML?
+What does <article> represent in HTML?
+What does <aside> represent in HTML?
+What does <nav> represent in HTML?
+What does <div> represent in HTML?
+What does <span> represent in HTML?
+What does <p> represent in HTML?
+What does <h1> represent in HTML?
+What does <h2> represent in HTML?
+What does <h3> represent in HTML?
+What does <h4> represent in HTML?
+What does <h5> represent in HTML?
+What does <h6> represent in HTML?
+What does <a> represent in HTML?
+What does <img> represent in HTML?
+What does <video> represent in HTML?
+What does <audio> represent in HTML?
+What does <source> represent in HTML?
+What does <track> represent in HTML?
+What does <canvas> represent in HTML?
+What does <svg> represent in HTML?
+What does <table> represent in HTML?
+What does <tr> represent in HTML?
+What does <td> represent in HTML?
+What does <th> represent in HTML?
+What does <thead> represent in HTML?
+What does <tbody> represent in HTML?
+What does <tfoot> represent in HTML?
+What does <ul> represent in HTML?
+What does <ol> represent in HTML?
+What does <li> represent in HTML?
+What does <form> represent in HTML?
+What does <input> represent in HTML?
+What does <textarea> represent in HTML?
+What does <select> represent in HTML?
+What does <option> represent in HTML?
+What does <button> represent in HTML?
+What does <label> represent in HTML?
+What does <fieldset> represent in HTML?
+What does <legend> represent in HTML?
+What does <datalist> represent in HTML?
+What does <optgroup> represent in HTML?
+What does <progress> represent in HTML?
+What does <meter> represent in HTML?
+What does <iframe> represent in HTML?
+What does <script> represent in HTML?
+What does <style> represent in HTML?
+What does <link> represent in HTML?
+What does <meta> represent in HTML?
+What does <base> represent in HTML?
+What does <b> represent in HTML?
+What does <strong> represent in HTML?
+What does <i> represent in HTML?
+What does <em> represent in HTML?
+What does <u> represent in HTML?
+What does <ins> represent in HTML?
+What does <del> represent in HTML?
+What does <sub> represent in HTML?
+What does <sup> represent in HTML?
+What does <br> represent in HTML?
+What does <hr> represent in HTML?
+What does <pre> represent in HTML?
+What does <code> represent in HTML?
+What does <kbd> represent in HTML?
+What does <samp> represent in HTML?
+What does <var> represent in HTML?
+What does <q> represent in HTML?
+What does <blockquote> represent in HTML?
+What does <cite> represent in HTML?
+What does <small> represent in HTML?
+What does <big> represent in HTML?
+What does <time> represent in HTML?
+What does <mark> represent in HTML?
+What does <ruby> represent in HTML?
+What does <rt> represent in HTML?
+What does <rp> represent in HTML?
+What does <bdi> represent in HTML?
+What does <bdo> represent in HTML?
+What does <data> represent in HTML?
+What does <template> represent in HTML?
+What does <noscript> represent in HTML?
+What does <picture> represent in HTML?
+What does <map> represent in HTML?
+What does <area> represent in HTML?
+What does <figure> represent in HTML?
+What does <figcaption> represent in HTML?
+What does <details> represent in HTML?
+What does <summary> represent in HTML?
+What does <dialog> represent in HTML?
+What does <command> represent in HTML?
+What does <menu> represent in HTML?
+What does <slot> represent in HTML?
+What does <custom-element> represent in HTML?
+What does <html> represent in HTML?
+What does <head> represent in HTML?
+What does <title> represent in HTML?
+What does <body> represent in HTML?
+What does <header> represent in HTML?
+What does <footer> represent in HTML?
+What does <main> represent in HTML?
+What does <section> represent in HTML?
+What does <article> represent in HTML?
+What does <aside> represent in HTML?
+What does <nav> represent in HTML?
+What does <div> represent in HTML?
+What does <span> represent in HTML?
+What does <p> represent in HTML?
+What does <h1> represent in HTML?
+What does <h2> represent in HTML?
+What does <h3> represent in HTML?
+What does <h4> represent in HTML?
+What does <h5> represent in HTML?
+What does <h6> represent in HTML?
+What does <a> represent in HTML?
+What does <img> represent in HTML?
+What does <video> represent in HTML?
+What does <audio> represent in HTML?
+What does <source> represent in HTML?
+What does <track> represent in HTML?
+What does <canvas> represent in HTML?
+What does <svg> represent in HTML?
+What does <table> represent in HTML?
+What does <tr> represent in HTML?
+What does <td> represent in HTML?
+What does <th> represent in HTML?
+What does <thead> represent in HTML?
+What does <tbody> represent in HTML?
+What does <tfoot> represent in HTML?
+What does <ul> represent in HTML?
+What does <ol> represent in HTML?
+What does <li> represent in HTML?
+What does <form> represent in HTML?
+What does <input> represent in HTML?
+What does <textarea> represent in HTML?
+What does <select> represent in HTML?
+What does <option> represent in HTML?
+What does <button> represent in HTML?
+What does <label> represent in HTML?
+What does <fieldset> represent in HTML?
+What does <legend> represent in HTML?
+What does <datalist> represent in HTML?
+What does <optgroup> represent in HTML?
+What does <progress> represent in HTML?
+What does <meter> represent in HTML?
+What does <iframe> represent in HTML?
+What does <script> represent in HTML?
+What does <style> represent in HTML?
+What does <link> represent in HTML?
+What does <meta> represent in HTML?
+What does <base> represent in HTML?
+What does <b> represent in HTML?
+What does <strong> represent in HTML?
+What does <i> represent in HTML?
+What does <em> represent in HTML?
+What does <u> represent in HTML?
+What does <ins> represent in HTML?
+What does <del> represent in HTML?
+What does <sub> represent in HTML?
+What does <sup> represent in HTML?
+What does <br> represent in HTML?
+What does <hr> represent in HTML?
+What does <pre> represent in HTML?
+What does <code> represent in HTML?
+What does <kbd> represent in HTML?
+What does <samp> represent in HTML?
+What does <var> represent in HTML?
+What does <q> represent in HTML?
+What does <blockquote> represent in HTML?
+What does <cite> represent in HTML?
+What does <small> represent in HTML?
+What does <big> represent in HTML?
+What does <time> represent in HTML?
+What does <mark> represent in HTML?
+What does <ruby> represent in HTML?
+What does <rt> represent in HTML?
+What does <rp> represent in HTML?
+What does <bdi> represent in HTML?
+What does <bdo> represent in HTML?
+What does <data> represent in HTML?
+What does <template> represent in HTML?
+What does <noscript> represent in HTML?
+What does <picture> represent in HTML?
+What does <map> represent in HTML?
+Build a webpage section using the <!--...--> tag.
+Show how to create an example with <!--...--> in HTML.
+Demonstrate how <!--...--> can structure content.
+Provide a code snippet using <!--...--> to build part of a page.
+Build a webpage section using the <!DOCTYPE> tag.
+Show how to create an example with <!DOCTYPE> in HTML.
+Demonstrate how <!DOCTYPE> can structure content.
+Provide a code snippet using <!DOCTYPE> to build part of a page.
+Build a webpage section using the <a> tag.
+Show how to create an example with <a> in HTML.
+Demonstrate how <a> can structure content.
+Provide a code snippet using <a> to build part of a page.
+Build a webpage section using the <abbr> tag.
+Show how to create an example with <abbr> in HTML.
+Demonstrate how <abbr> can structure content.
+Provide a code snippet using <abbr> to build part of a page.
+Build a webpage section using the <address> tag.
+Show how to create an example with <address> in HTML.
+Demonstrate how <address> can structure content.
+Provide a code snippet using <address> to build part of a page.
+Build a webpage section using the <area> tag.
+Show how to create an example with <area> in HTML.
+Demonstrate how <area> can structure content.
+Provide a code snippet using <area> to build part of a page.
+Build a webpage section using the <article> tag.
+Show how to create an example with <article> in HTML.
+Demonstrate how <article> can structure content.
+Provide a code snippet using <article> to build part of a page.
+Build a webpage section using the <aside> tag.
+Show how to create an example with <aside> in HTML.
+Demonstrate how <aside> can structure content.
+Provide a code snippet using <aside> to build part of a page.
+Build a webpage section using the <audio> tag.
+Show how to create an example with <audio> in HTML.
+Demonstrate how <audio> can structure content.
+Provide a code snippet using <audio> to build part of a page.
+Build a webpage section using the <b> tag.
+Show how to create an example with <b> in HTML.
+Demonstrate how <b> can structure content.
+Provide a code snippet using <b> to build part of a page.
+Build a webpage section using the <base> tag.
+Show how to create an example with <base> in HTML.
+Demonstrate how <base> can structure content.
+Provide a code snippet using <base> to build part of a page.
+Build a webpage section using the <bdi> tag.
+Show how to create an example with <bdi> in HTML.
+Demonstrate how <bdi> can structure content.
+Provide a code snippet using <bdi> to build part of a page.
+Build a webpage section using the <bdo> tag.
+Show how to create an example with <bdo> in HTML.
+Demonstrate how <bdo> can structure content.
+Provide a code snippet using <bdo> to build part of a page.
+Build a webpage section using the <big> tag.
+Show how to create an example with <big> in HTML.
+Demonstrate how <big> can structure content.
+Provide a code snippet using <big> to build part of a page.
+Build a webpage section using the <blockquote> tag.
+Show how to create an example with <blockquote> in HTML.
+Demonstrate how <blockquote> can structure content.
+Provide a code snippet using <blockquote> to build part of a page.
+Build a webpage section using the <body> tag.
+Show how to create an example with <body> in HTML.
+Demonstrate how <body> can structure content.
+Provide a code snippet using <body> to build part of a page.
+Build a webpage section using the <br> tag.
+Show how to create an example with <br> in HTML.
+Demonstrate how <br> can structure content.
+Provide a code snippet using <br> to build part of a page.
+Build a webpage section using the <button> tag.
+Show how to create an example with <button> in HTML.
+Demonstrate how <button> can structure content.
+Provide a code snippet using <button> to build part of a page.
+Build a webpage section using the <canvas> tag.
+Show how to create an example with <canvas> in HTML.
+Demonstrate how <canvas> can structure content.
+Provide a code snippet using <canvas> to build part of a page.
+Build a webpage section using the <caption> tag.
+Show how to create an example with <caption> in HTML.
+Demonstrate how <caption> can structure content.
+Provide a code snippet using <caption> to build part of a page.
+Build a webpage section using the <cite> tag.
+Show how to create an example with <cite> in HTML.
+Demonstrate how <cite> can structure content.
+Provide a code snippet using <cite> to build part of a page.
+Build a webpage section using the <code> tag.
+Show how to create an example with <code> in HTML.
+Demonstrate how <code> can structure content.
+Provide a code snippet using <code> to build part of a page.
+Build a webpage section using the <col> tag.
+Show how to create an example with <col> in HTML.
+Demonstrate how <col> can structure content.
+Provide a code snippet using <col> to build part of a page.
+Build a webpage section using the <colgroup> tag.
+Show how to create an example with <colgroup> in HTML.
+Demonstrate how <colgroup> can structure content.
+Provide a code snippet using <colgroup> to build part of a page.
+Build a webpage section using the <command> tag.
+Show how to create an example with <command> in HTML.
+Demonstrate how <command> can structure content.
+Provide a code snippet using <command> to build part of a page.
+Build a webpage section using the <custom-element> tag.
+Show how to create an example with <custom-element> in HTML.
+Demonstrate how <custom-element> can structure content.
+Provide a code snippet using <custom-element> to build part of a page.
+Build a webpage section using the <data> tag.
+Show how to create an example with <data> in HTML.
+Demonstrate how <data> can structure content.
+Provide a code snippet using <data> to build part of a page.
+Build a webpage section using the <datalist> tag.
+Show how to create an example with <datalist> in HTML.
+Demonstrate how <datalist> can structure content.
+Provide a code snippet using <datalist> to build part of a page.
+Build a webpage section using the <dd> tag.
+Show how to create an example with <dd> in HTML.
+Demonstrate how <dd> can structure content.
+Provide a code snippet using <dd> to build part of a page.
+Build a webpage section using the <del> tag.
+Show how to create an example with <del> in HTML.
+Demonstrate how <del> can structure content.
+Provide a code snippet using <del> to build part of a page.
+Build a webpage section using the <details> tag.
+Show how to create an example with <details> in HTML.
+Demonstrate how <details> can structure content.
+Provide a code snippet using <details> to build part of a page.
+Build a webpage section using the <dfn> tag.
+Show how to create an example with <dfn> in HTML.
+Demonstrate how <dfn> can structure content.
+Provide a code snippet using <dfn> to build part of a page.
+Build a webpage section using the <dialog> tag.
+Show how to create an example with <dialog> in HTML.
+Demonstrate how <dialog> can structure content.
+Provide a code snippet using <dialog> to build part of a page.
+Build a webpage section using the <div> tag.
+Show how to create an example with <div> in HTML.
+Demonstrate how <div> can structure content.
+Provide a code snippet using <div> to build part of a page.
+Build a webpage section using the <dl> tag.
+Show how to create an example with <dl> in HTML.
+Demonstrate how <dl> can structure content.
+Provide a code snippet using <dl> to build part of a page.
+Build a webpage section using the <dt> tag.
+Show how to create an example with <dt> in HTML.
+Demonstrate how <dt> can structure content.
+Provide a code snippet using <dt> to build part of a page.
+Build a webpage section using the <em> tag.
+Show how to create an example with <em> in HTML.
+Demonstrate how <em> can structure content.
+Provide a code snippet using <em> to build part of a page.
+Build a webpage section using the <embed> tag.
+Show how to create an example with <embed> in HTML.
+Demonstrate how <embed> can structure content.
+Provide a code snippet using <embed> to build part of a page.
+Build a webpage section using the <fieldset> tag.
+Show how to create an example with <fieldset> in HTML.
+Demonstrate how <fieldset> can structure content.
+Provide a code snippet using <fieldset> to build part of a page.
+Build a webpage section using the <figcaption> tag.
+Show how to create an example with <figcaption> in HTML.
+Demonstrate how <figcaption> can structure content.
+Provide a code snippet using <figcaption> to build part of a page.
+Build a webpage section using the <figure> tag.
+Show how to create an example with <figure> in HTML.
+Demonstrate how <figure> can structure content.
+Provide a code snippet using <figure> to build part of a page.
+Build a webpage section using the <footer> tag.
+Show how to create an example with <footer> in HTML.
+Demonstrate how <footer> can structure content.
+Provide a code snippet using <footer> to build part of a page.
+Build a webpage section using the <form> tag.
+Show how to create an example with <form> in HTML.
+Demonstrate how <form> can structure content.
+Provide a code snippet using <form> to build part of a page.
+Build a webpage section using the <h1> tag.
+Show how to create an example with <h1> in HTML.
+Demonstrate how <h1> can structure content.
+Provide a code snippet using <h1> to build part of a page.
+Build a webpage section using the <h2> tag.
+Show how to create an example with <h2> in HTML.
+Demonstrate how <h2> can structure content.
+Provide a code snippet using <h2> to build part of a page.
+Build a webpage section using the <h3> tag.
+Show how to create an example with <h3> in HTML.
+Demonstrate how <h3> can structure content.
+Provide a code snippet using <h3> to build part of a page.
+Build a webpage section using the <h4> tag.
+Show how to create an example with <h4> in HTML.
+Demonstrate how <h4> can structure content.
+Provide a code snippet using <h4> to build part of a page.
+Build a webpage section using the <h5> tag.
+Show how to create an example with <h5> in HTML.
+Demonstrate how <h5> can structure content.
+Provide a code snippet using <h5> to build part of a page.
+Build a webpage section using the <h6> tag.
+Show how to create an example with <h6> in HTML.
+Demonstrate how <h6> can structure content.
+Provide a code snippet using <h6> to build part of a page.
+Build a webpage section using the <head> tag.
+Show how to create an example with <head> in HTML.
+Demonstrate how <head> can structure content.
+Provide a code snippet using <head> to build part of a page.
+Build a webpage section using the <header> tag.
+Show how to create an example with <header> in HTML.
+Demonstrate how <header> can structure content.
+Provide a code snippet using <header> to build part of a page.
+Build a webpage section using the <hgroup> tag.
+Show how to create an example with <hgroup> in HTML.
+Demonstrate how <hgroup> can structure content.
+Provide a code snippet using <hgroup> to build part of a page.
+Build a webpage section using the <hr> tag.
+Show how to create an example with <hr> in HTML.
+Demonstrate how <hr> can structure content.
+Provide a code snippet using <hr> to build part of a page.
+Build a webpage section using the <html> tag.
+Show how to create an example with <html> in HTML.
+Demonstrate how <html> can structure content.
+Provide a code snippet using <html> to build part of a page.
+Build a webpage section using the <i> tag.
+Show how to create an example with <i> in HTML.
+Demonstrate how <i> can structure content.
+Provide a code snippet using <i> to build part of a page.
+Build a webpage section using the <iframe> tag.
+Show how to create an example with <iframe> in HTML.
+Demonstrate how <iframe> can structure content.
+Provide a code snippet using <iframe> to build part of a page.
+Build a webpage section using the <img> tag.
+Show how to create an example with <img> in HTML.
+Demonstrate how <img> can structure content.
+Provide a code snippet using <img> to build part of a page.
+Build a webpage section using the <input> tag.
+Show how to create an example with <input> in HTML.
+Demonstrate how <input> can structure content.
+Provide a code snippet using <input> to build part of a page.
+Build a webpage section using the <ins> tag.
+Show how to create an example with <ins> in HTML.
+Demonstrate how <ins> can structure content.
+Provide a code snippet using <ins> to build part of a page.
+Build a webpage section using the <kbd> tag.
+Show how to create an example with <kbd> in HTML.
+Demonstrate how <kbd> can structure content.
+Provide a code snippet using <kbd> to build part of a page.
+Build a webpage section using the <label> tag.
+Show how to create an example with <label> in HTML.
+Demonstrate how <label> can structure content.
+Provide a code snippet using <label> to build part of a page.
+Build a webpage section using the <legend> tag.
+Show how to create an example with <legend> in HTML.
+Demonstrate how <legend> can structure content.
+Provide a code snippet using <legend> to build part of a page.
+Build a webpage section using the <li> tag.
+Show how to create an example with <li> in HTML.
+Demonstrate how <li> can structure content.
+Provide a code snippet using <li> to build part of a page.
+Build a webpage section using the <link> tag.
+Show how to create an example with <link> in HTML.
+Demonstrate how <link> can structure content.
+Provide a code snippet using <link> to build part of a page.
+Build a webpage section using the <main> tag.
+Show how to create an example with <main> in HTML.
+Demonstrate how <main> can structure content.
+Provide a code snippet using <main> to build part of a page.
+Build a webpage section using the <map> tag.
+Show how to create an example with <map> in HTML.
+Demonstrate how <map> can structure content.
+Provide a code snippet using <map> to build part of a page.
+Build a webpage section using the <mark> tag.
+Show how to create an example with <mark> in HTML.
+Demonstrate how <mark> can structure content.
+Provide a code snippet using <mark> to build part of a page.
+Build a webpage section using the <menu> tag.
+Show how to create an example with <menu> in HTML.
+Demonstrate how <menu> can structure content.
+Provide a code snippet using <menu> to build part of a page.
+Build a webpage section using the <meta> tag.
+Show how to create an example with <meta> in HTML.
+Demonstrate how <meta> can structure content.
+Provide a code snippet using <meta> to build part of a page.
+Build a webpage section using the <meter> tag.
+Show how to create an example with <meter> in HTML.
+Demonstrate how <meter> can structure content.
+Provide a code snippet using <meter> to build part of a page.
+Build a webpage section using the <nav> tag.
+Show how to create an example with <nav> in HTML.
+Demonstrate how <nav> can structure content.
+Provide a code snippet using <nav> to build part of a page.
+Build a webpage section using the <noscript> tag.
+Show how to create an example with <noscript> in HTML.
+Demonstrate how <noscript> can structure content.
+Provide a code snippet using <noscript> to build part of a page.
+Build a webpage section using the <object> tag.
+Show how to create an example with <object> in HTML.
+Demonstrate how <object> can structure content.
+Provide a code snippet using <object> to build part of a page.
+Build a webpage section using the <ol> tag.
+Show how to create an example with <ol> in HTML.
+Demonstrate how <ol> can structure content.
+Provide a code snippet using <ol> to build part of a page.
+Build a webpage section using the <optgroup> tag.
+Show how to create an example with <optgroup> in HTML.
+Demonstrate how <optgroup> can structure content.
+Provide a code snippet using <optgroup> to build part of a page.
+Build a webpage section using the <option> tag.
+Show how to create an example with <option> in HTML.
+Demonstrate how <option> can structure content.
+Provide a code snippet using <option> to build part of a page.
+Build a webpage section using the <output> tag.
+Show how to create an example with <output> in HTML.
+Demonstrate how <output> can structure content.
+Provide a code snippet using <output> to build part of a page.
+Build a webpage section using the <p> tag.
+Show how to create an example with <p> in HTML.
+Demonstrate how <p> can structure content.
+Provide a code snippet using <p> to build part of a page.
+Build a webpage section using the <param> tag.
+Show how to create an example with <param> in HTML.
+Demonstrate how <param> can structure content.
+Provide a code snippet using <param> to build part of a page.
+Build a webpage section using the <picture> tag.
+Show how to create an example with <picture> in HTML.
+Demonstrate how <picture> can structure content.
+Provide a code snippet using <picture> to build part of a page.
+Build a webpage section using the <pre> tag.
+Show how to create an example with <pre> in HTML.
+Demonstrate how <pre> can structure content.
+Provide a code snippet using <pre> to build part of a page.
+Build a webpage section using the <progress> tag.
+Show how to create an example with <progress> in HTML.
+Demonstrate how <progress> can structure content.
+Provide a code snippet using <progress> to build part of a page.
+Build a webpage section using the <q> tag.
+Show how to create an example with <q> in HTML.
+Demonstrate how <q> can structure content.
+Provide a code snippet using <q> to build part of a page.
+Build a webpage section using the <rp> tag.
+Show how to create an example with <rp> in HTML.
+Demonstrate how <rp> can structure content.
+Provide a code snippet using <rp> to build part of a page.
+Build a webpage section using the <rt> tag.
+Show how to create an example with <rt> in HTML.
+Demonstrate how <rt> can structure content.
+Provide a code snippet using <rt> to build part of a page.
+Build a webpage section using the <ruby> tag.
+Show how to create an example with <ruby> in HTML.
+Demonstrate how <ruby> can structure content.
+Provide a code snippet using <ruby> to build part of a page.
+Build a webpage section using the <s> tag.
+Show how to create an example with <s> in HTML.
+Demonstrate how <s> can structure content.
+Provide a code snippet using <s> to build part of a page.
+Build a webpage section using the <samp> tag.
+Show how to create an example with <samp> in HTML.
+Demonstrate how <samp> can structure content.
+Provide a code snippet using <samp> to build part of a page.
+Build a webpage section using the <script> tag.
+Show how to create an example with <script> in HTML.
+Demonstrate how <script> can structure content.
+Provide a code snippet using <script> to build part of a page.
+Build a webpage section using the <search> tag.
+Show how to create an example with <search> in HTML.
+Demonstrate how <search> can structure content.
+Provide a code snippet using <search> to build part of a page.
+Build a webpage section using the <section> tag.
+Show how to create an example with <section> in HTML.
+Demonstrate how <section> can structure content.
+Provide a code snippet using <section> to build part of a page.
+Build a webpage section using the <select> tag.
+Show how to create an example with <select> in HTML.
+Demonstrate how <select> can structure content.
+Provide a code snippet using <select> to build part of a page.
+Build a webpage section using the <slot> tag.
+Show how to create an example with <slot> in HTML.
+Demonstrate how <slot> can structure content.
+Provide a code snippet using <slot> to build part of a page.
+Build a webpage section using the <small> tag.
+Show how to create an example with <small> in HTML.
+Demonstrate how <small> can structure content.
+Provide a code snippet using <small> to build part of a page.
+Build a webpage section using the <source> tag.
+Show how to create an example with <source> in HTML.
+Demonstrate how <source> can structure content.
+Provide a code snippet using <source> to build part of a page.
+Build a webpage section using the <span> tag.
+Show how to create an example with <span> in HTML.
+Demonstrate how <span> can structure content.
+Provide a code snippet using <span> to build part of a page.
+Build a webpage section using the <strong> tag.
+Show how to create an example with <strong> in HTML.
+Demonstrate how <strong> can structure content.
+Provide a code snippet using <strong> to build part of a page.
+Build a webpage section using the <style> tag.
+Show how to create an example with <style> in HTML.
+Demonstrate how <style> can structure content.
+Provide a code snippet using <style> to build part of a page.
+Build a webpage section using the <sub> tag.
+Show how to create an example with <sub> in HTML.
+Demonstrate how <sub> can structure content.
+Provide a code snippet using <sub> to build part of a page.
+Build a webpage section using the <summary> tag.
+Show how to create an example with <summary> in HTML.
+Demonstrate how <summary> can structure content.
+Provide a code snippet using <summary> to build part of a page.

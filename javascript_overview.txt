@@ -1,0 +1,55 @@
+# JavaScript Overview
+
+document.getElementById() : Access an element by ID.
+document.querySelector() : Access the first element matching a CSS selector.
+document.createElement() : Create a new HTML element.
+node.appendChild() : Insert a child element into the DOM.
+node.remove() : Remove an element from the DOM.
+node.classList.add() : Add a CSS class to an element.
+node.classList.remove() : Remove a CSS class from an element.
+node.addEventListener() : Attach an event handler to an element.
+node.innerHTML : Get or set the HTML content of an element.
+console.log() : Output a message for debugging.
+setTimeout() : Run code once after a delay.
+setInterval() : Run code repeatedly on a timer.
+fetch() : Request resources from a server.
+JSON.parse() : Convert a JSON string into a JavaScript object.
+JSON.stringify() : Convert a JavaScript object into JSON.
+localStorage.setItem() : Store data in local storage.
+localStorage.getItem() : Retrieve data from local storage.
+sessionStorage.setItem() : Store session data.
+sessionStorage.getItem() : Retrieve data from the current session.
+
+const container = document.querySelector('main');
+const article = document.createElement('article');
+article.textContent = 'New article content.';
+container.appendChild(article);
+document.querySelector('nav a').classList.add('active');
+document.querySelector('footer').innerHTML = '<p>©2025</p>';
+const list = document.createElement('ul');
+list.innerHTML = '<li>One</li><li>Two</li>';
+document.body.appendChild(list);
+document.querySelector('section').remove();
+const aside = document.querySelector('aside');
+aside.style.display = 'none';
+const newSection = document.createElement('section');
+newSection.id = 'intro';
+document.querySelector('main').prepend(newSection);
+
+document.querySelectorAll('article').forEach(a => a.classList.add('read'));
+const header = document.createElement('header');
+header.textContent = 'Welcome';
+document.body.insertBefore(header, document.body.firstChild);
+window.scrollTo({top: 0});
+document.title = 'Updated';
+const footer = document.querySelector('footer');
+footer.style.backgroundColor = '#eee';
+history.pushState({}, '', '/next');
+const fragment = document.createDocumentFragment();
+fragment.appendChild(document.createElement('div'));
+document.querySelector('main').appendChild(fragment);
+const nav = document.createElement('nav');
+document.body.appendChild(nav);
+document.querySelector('main').insertAdjacentHTML('beforeend', '<section id="more"></section>');
+document.getElementById('more').scrollIntoView();
+These commands allow JavaScript to dynamically update the HTML generated with the tags in this repository.
