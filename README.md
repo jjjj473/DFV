@@ -15,6 +15,7 @@ Files included:
 - `javascript_forms.txt` — scripts to process and validate form data
 - `ai_model_basic.txt` — describes a model that assembles static sites using these datasets
 - `ai_model_dynamic.txt` — outlines a dynamic application builder trained on the same files
+- `custom_ai_model.py` — loads all datasets and answers queries with simple pattern matching
 
 Each JavaScript file mirrors the HTML tag lists with example actions showing how scripts interact with those tags.
 The placeholder lines previously numbered as "Example entry" have been replaced with concise snippets of real JavaScript.
