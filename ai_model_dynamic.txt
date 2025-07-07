@@ -1,0 +1,15 @@
+# Interactive Application AI
+
+Built from the same eight dataset files, this model focuses on creating rich interactive experiences. Its capabilities include:
+- Assembling complex page layouts with sections and navigation from `html_tags_overview.txt`
+- Styling and structuring text using `html_tags_text.txt`
+- Embedding media players from `html_tags_media.txt`
+- Designing and validating advanced forms with `html_tags_forms.txt`
+
+Leveraging the JavaScript references, it can:
+- Add event listeners to capture user actions
+- Manipulate the DOM to show or hide content
+- Fetch remote data and update the page dynamically
+- Provide custom validation feedback for forms
+
+This model is ideal for building web applications that respond to user input and update content without page reloads.

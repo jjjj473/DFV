@@ -1,0 +1,49 @@
+# JavaScript for Text Manipulation
+
+element.textContent : Get or set the plain text of an element.
+element.innerText : Read or update text with layout considerations.
+document.createTextNode() : Create a standalone text node.
+element.style.fontWeight = 'bold' : Make text bold.
+element.style.fontStyle = 'italic' : Italicize text content.
+element.style.textDecoration = 'underline' : Underline text.
+element.style.color = 'red' : Change the text color.
+element.style.fontSize = '1.2em' : Adjust the text size.
+element.insertAdjacentText('beforeend', '...') : Insert text at a specific position.
+element.replaceChildren() : Replace all child nodes, including text.
+element.innerHTML += '<br>' : Insert a line break via HTML.
+element.classList.toggle('highlight') : Toggle a class that changes text appearance.
+document.execCommand('copy') : Attempt to copy selected text to the clipboard.
+document.queryCommandSupported('copy') : Check if the copy command is allowed.
+window.getSelection().toString() : Retrieve currently selected text.
+
+document.querySelector('p').textContent = 'Updated paragraph text.';
+document.querySelector('h1').innerText = 'Page Title';
+document.querySelectorAll('li').forEach(li => li.classList.add('item'));
+const highlight = document.createElement('mark');
+highlight.textContent = 'important';
+document.querySelector('p.intro').appendChild(highlight);
+document.querySelector('input[name="q"]').value = 'search term';
+const output = document.createElement('pre');
+output.textContent = JSON.stringify({foo: 'bar'});
+document.body.appendChild(output);
+const count = document.querySelectorAll('p').length;
+console.log('Paragraph count', count);
+document.querySelector('textarea').setAttribute('rows', '5');
+document.execCommand('selectAll');
+window.getSelection().removeAllRanges();
+
+document.querySelector('p').append(' Additional text.');
+const strong = document.createElement('strong');
+strong.textContent = 'bold';
+document.querySelector('p').appendChild(strong);
+document.querySelector('ul').lastElementChild.remove();
+const link = document.querySelector('a');
+link.textContent = 'Home';
+link.href = '/';
+document.querySelector('div').style.textTransform = 'uppercase';
+document.querySelector('p').insertAdjacentHTML('beforebegin', '<hr>');
+document.querySelectorAll('span.highlight').forEach(s => s.style.backgroundColor = 'yellow');
+document.createRange().selectNodeContents(document.querySelector('div'));
+document.querySelector('pre').innerText = '<code>'; 
+document.body.insertAdjacentHTML('afterbegin', '<h2>Heading</h2>');
+These actions allow scripts to modify and style the text-based content described in the HTML text tag list.
